@@ -9,6 +9,7 @@ import { DataBindingComponent } from './binding-methods/data-binding/data-bindin
 import { EventBindingComponent } from './binding-methods/event-binding/event-binding.component';
 import { TwoWayBindingComponent } from './binding-methods/two-way-binding/two-way-binding.component';
 import { NgForComponent } from './directive/ng-for/ng-for.component';
+import { ChangeDetectionComponent } from './directive/change-detection/change-detection.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'two-way-binding', component: TwoWayBindingComponent },
 
   { path: 'ng-for-directive', component: NgForComponent },
+  { path: 'change-detection', component: ChangeDetectionComponent },
 ];
 
 @NgModule({
