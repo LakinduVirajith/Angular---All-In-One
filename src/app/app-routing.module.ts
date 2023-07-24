@@ -8,11 +8,13 @@ import { UPostComponent } from './decorators/output-decorator/u-post/u-post.comp
 import { DataBindingComponent } from './binding-methods/data-binding/data-binding.component';
 import { EventBindingComponent } from './binding-methods/event-binding/event-binding.component';
 import { TwoWayBindingComponent } from './binding-methods/two-way-binding/two-way-binding.component';
+
 import { NgForComponent } from './directive/ng-for/ng-for.component';
 import { ChangeDetectionComponent } from './directive/change-detection/change-detection.component';
 import { NgIfComponent } from './directive/ng-if/ng-if.component';
 import { NgSwitchCaseComponent } from './directive/ng-switch-case/ng-switch-case.component';
 import { NgStyleComponent } from './directive/ng-style/ng-style.component';
+import { NgClassComponent } from './directive/ng-class/ng-class.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -30,7 +32,7 @@ const routes: Routes = [
   { path: 'ng-if-directive', component: NgIfComponent },
   { path: 'ng-switch-case-directive', component: NgSwitchCaseComponent },
   { path: 'ng-style-directive', component: NgStyleComponent },
-  { path: 'ng-class-directive', component: NgSwitchCaseComponent },
+  { path: 'ng-class-directive', component: NgClassComponent },
 ];
 
 @NgModule({

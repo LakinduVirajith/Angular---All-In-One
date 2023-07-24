@@ -20,6 +20,7 @@ import { ChangeDetectionComponent } from './directive/change-detection/change-de
 import { NgIfComponent } from './directive/ng-if/ng-if.component';
 import { NgSwitchCaseComponent } from './directive/ng-switch-case/ng-switch-case.component';
 import { NgStyleComponent } from './directive/ng-style/ng-style.component';
+import { NgClassComponent } from './directive/ng-class/ng-class.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { NgStyleComponent } from './directive/ng-style/ng-style.component';
       NgIfComponent,
       NgSwitchCaseComponent,
       NgStyleComponent,
+      NgClassComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
