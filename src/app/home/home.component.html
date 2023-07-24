@@ -5,6 +5,7 @@
   <div class="page" *ngIf="option === 0">
     <button class="btn btn-dark" (click)="onClick(1)">Decorator</button>
     <button class="btn btn-dark" (click)="onClick(2)">Binding</button>
+    <button class="btn btn-dark" (click)="onClick(3)">Directive</button>
   </div>
 
   <div [ngSwitch]="option">
@@ -29,6 +30,17 @@
       <h6>Two-Way Binding</h6>
       <button class="btn btn-dark" routerLink="/two-way-binding">
         Two-Way Binding</button
+      ><br />
+      <button class="btn btn-dark" (click)="onClick(0)">Go Back</button>
+    </div>
+
+    <div *ngSwitchCase="3" class="sub">
+      <h6>Structural Directive</h6>
+      <button class="btn btn-dark" routerLink="/ng-for-directive">
+        NgFor Directive
+      </button>
+      <button class="btn btn-dark" routerLink="/change-detection">
+        Change Detection</button
       ><br />
       <button class="btn btn-dark" (click)="onClick(0)">Go Back</button>
     </div>

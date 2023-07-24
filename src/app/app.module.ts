@@ -15,6 +15,8 @@ import { DataBindingComponent } from './binding-methods/data-binding/data-bindin
 import { EventBindingComponent } from './binding-methods/event-binding/event-binding.component';
 import { TwoWayBindingComponent } from './binding-methods/two-way-binding/two-way-binding.component';
 
+import { NgForComponent } from './directive/ng-for/ng-for.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +30,8 @@ import { TwoWayBindingComponent } from './binding-methods/two-way-binding/two-wa
     DataBindingComponent,
     EventBindingComponent,
     TwoWayBindingComponent,
+
+    NgForComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],

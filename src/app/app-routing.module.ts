@@ -8,6 +8,7 @@ import { UPostComponent } from './decorators/output-decorator/u-post/u-post.comp
 import { DataBindingComponent } from './binding-methods/data-binding/data-binding.component';
 import { EventBindingComponent } from './binding-methods/event-binding/event-binding.component';
 import { TwoWayBindingComponent } from './binding-methods/two-way-binding/two-way-binding.component';
+import { NgForComponent } from './directive/ng-for/ng-for.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -19,6 +20,8 @@ const routes: Routes = [
   { path: 'data-binding', component: DataBindingComponent },
   { path: 'event-binding', component: EventBindingComponent },
   { path: 'two-way-binding', component: TwoWayBindingComponent },
+
+  { path: 'ng-for-directive', component: NgForComponent },
 ];
 
 @NgModule({
