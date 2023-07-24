@@ -1,0 +1,38 @@
+<h4>Data Binding Examples</h4>
+
+<!-- string interpolation -->
+<div class="border">
+  <p>{{ message }}</p>
+</div>
+
+<!-- property binding -->
+<div class="border">
+  <p>property binding</p>
+  <img [src]="imgUrl" alt="imgUrl" width="100" />
+</div>
+
+<!-- class binding -->
+<div class="border">
+  <button class="btn btn-dark mb-2" (click)="classBinding()">click me</button>
+  <h6 [class.text-red]="bool">class binding</h6>
+</div>
+
+<!-- style binding -->
+<div class="border">
+  <button class="btn btn-dark mb-2" (click)="styleBinding()">click me</button>
+  <h6 [style.color]="boolClass ? 'rgb(190, 84, 44)' : 'rgb(0, 132, 194)'">
+    style binding
+  </h6>
+</div>
+
+<!-- template variable -->
+<div class="border">
+  <p>template variable</p>
+  <input
+    type="text"
+    #username
+    (keyup.enter)="onKeyup(username.value)"
+    placeholder="type and press enter"
+  />
+  <h6 class="pt-1">{{ variable }}</h6>
+</div>

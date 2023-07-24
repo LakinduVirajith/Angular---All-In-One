@@ -1,0 +1,25 @@
+<h3>{{ pageHeader }}</h3>
+<br />
+
+<div class="main">
+  <div class="page" *ngIf="option === 0">
+    <button class="btn btn-dark" (click)="onClick(1)">Decorator</button>
+  </div>
+
+  <div [ngSwitch]="option">
+    <div *ngSwitchCase="1" class="sub">
+      <h6>One-Way Binding</h6>
+      <button class="btn btn-dark" routerLink="/data-binding">
+        Data Binding
+      </button>
+      <button class="btn btn-dark" routerLink="/event-binding">
+        Event Binding
+      </button>
+      <h6>Two-Way Binding</h6>
+      <button class="btn btn-dark" routerLink="/two-way-binding">
+        Two-Way Binding</button
+      ><br />
+      <button class="btn btn-dark" (click)="onClick(0)">Go Back</button>
+    </div>
+  </div>
+</div>

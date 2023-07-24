@@ -1,0 +1,10 @@
+.main {
+  .page,
+  .sub {
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+    margin: auto;
+    width: 100%;
+  }
+}
