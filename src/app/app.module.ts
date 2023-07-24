@@ -11,6 +11,8 @@ import { TwoWayBindingComponent } from './binding-methods/two-way-binding/two-wa
 
 import { IPostComponent } from './decorators/input-decorator/i-post/i-post.component';
 import { IPostListComponent } from './decorators/input-decorator/i-post-list/i-post-list.component';
+import { UPostComponent } from './decorators/output-decorator/u-post/u-post.component';
+import { UPostListComponent } from './decorators/output-decorator/u-post-list/u-post-list.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { IPostListComponent } from './decorators/input-decorator/i-post-list/i-p
     TwoWayBindingComponent,
     IPostComponent,
     IPostListComponent,
+    UPostComponent,
+    UPostListComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
