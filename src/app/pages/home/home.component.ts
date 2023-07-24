@@ -13,6 +13,6 @@ export class HomeComponent {
     this.option = option;
 
     if (option == 1 || 2 || 3 || 4) this.pageHeader = '';
-    else this.pageHeader = 'Angular All In One';
+    if (option == 0) this.pageHeader = 'Angular All In One';
   }
 }

@@ -1,0 +1,59 @@
+<h4>Event Binding Examples</h4>
+
+<!-- binding to event -->
+<div class="border">
+  <button class="btn btn-dark" (click)="clickBindingHandle()">
+    click binding
+  </button>
+  <p class="mt-1">{{ clickBinding }}</p>
+</div>
+
+<!-- binding to keyboard event -->
+<div class="border">
+  <input
+    type="text"
+    (keydown.shift)="onKeydown($event)"
+    [value]="keyboardEvent"
+    placeholder="press shift to run"
+  />
+</div>
+
+<!-- full list of angular events -->
+<h4>Full List of Angular Events</h4>
+
+<div class="border">
+  <button class="btn btn-dark" (click)="viewList()">view list</button><br />
+
+  <div [style.display]="view ? '' : 'none'">
+    <div class="d-flex justify-content-around" style="width: 100vh">
+      <p>(click)="function()"</p>
+      <p>(dblclick)="function()"</p>
+      <p>(submit)="function()"</p>
+    </div>
+    <div class="d-flex justify-content-around" style="width: 100vh">
+      <p>(blur)="function()"</p>
+      <p>(focus)="function()"</p>
+      <p>(scroll)="function()"</p>
+    </div>
+    <div class="d-flex justify-content-around" style="width: 100vh">
+      <p>(cut)="function()"</p>
+      <p>(copy)="function()"</p>
+      <p>(paste)="function()"</p>
+    </div>
+    <div class="d-flex justify-content-around" style="width: 100vh">
+      <p>(keyup)="function()"</p>
+      <p>(keypress)="function()"</p>
+      <p>(keydown)="function()"</p>
+    </div>
+    <div class="d-flex justify-content-around" style="width: 100vh">
+      <p>(mouseup)="function()"</p>
+      <p>(mousedown)="function()"</p>
+      <p>(mouseenter)="function()"</p>
+    </div>
+    <div class="d-flex justify-content-around" style="width: 100vh">
+      <p>(drag)="function()"</p>
+      <p>(drop)="function()"</p>
+      <p>(dragover)="function()"</p>
+    </div>
+  </div>
+</div>
