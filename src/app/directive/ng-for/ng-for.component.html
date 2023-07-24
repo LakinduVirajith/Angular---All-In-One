@@ -1,0 +1,16 @@
+<h4>NgFor Example</h4>
+<br />
+
+<!-- fetching normal array -->
+<h6>fetching normal array</h6>
+<ul style="width: fit-content">
+  <li *ngFor="let post of postArray">{{ post }}</li>
+</ul>
+
+<!-- fetching object array -->
+<h6>fetching object array</h6>
+<ul style="width: fit-content">
+  <li *ngFor="let post of objArray">
+    id: {{ post.id }}, title: {{ post.postTitle }}
+  </li>
+</ul>

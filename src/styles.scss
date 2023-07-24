@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  margin-top: 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.border {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  padding: 1rem;
+  border: solid;
+}
+
+input {
+  padding-left: 4px;
+  padding-bottom: 4px;
+  border-radius: 2px;
+  border-width: 1px;
+}

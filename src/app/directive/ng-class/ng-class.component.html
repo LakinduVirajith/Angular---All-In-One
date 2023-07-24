@@ -1,0 +1,38 @@
+<h4>NgClass Example</h4><br />
+
+<h6 [ngClass]="{ 'main': isActive, 'padding': isActive }">
+  This is a NgClass Directive - Look at the code
+</h6><br />
+
+<!-- exercise  -->
+<button class="btn btn-dark" (click)="onClick()">view exercise</button><br /><br />
+
+<div *ngIf="click">
+  <h4>User Deatils</h4><br />
+  <input type="text" placeholder="user name" [(ngModel)]="name"><br /><br />
+  <input type="email" placeholder="dev@gmail.com" [(ngModel)]="email"><br /><br />
+  <textarea name="address" cols="23" rows="5" placeholder="address" [(ngModel)]="address"></textarea><br /><br />
+  <button class="btn btn-dark" (click)="onSubmit()">save data</button><br /><br />
+
+  <div *ngIf="userDetails.length > 0; else noData">
+    <th style="display: flex; justify-content: space-between">
+      <h6>#</h6>
+      <h6>name</h6>
+      <h6>email</h6>
+      <h6>address</h6>
+      <h6>action</h6>
+    </th>
+    <tr style="display: flex; justify-content: space-between" *ngFor="let user of userDetails; let i = index">
+      <h6>{{i + 1}}</h6>
+      <h6>{{user.name}}</h6>
+      <h6>{{user.email}}</h6>
+      <h6>{{user.address}}</h6>
+      <h6>
+        <button class="btn btn-dark" (click)="deleteRow(i)">delete</button>
+      </h6>
+    </tr>
+  </div>
+  <ng-template #noData>
+    <h6>no data to show</h6>
+  </ng-template>
+</div>
