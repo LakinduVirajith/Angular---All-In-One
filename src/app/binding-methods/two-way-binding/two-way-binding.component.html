@@ -1,0 +1,55 @@
+<h4>Two-Way Binding Examples</h4>
+
+<!-- two-way data binding -->
+<input
+  type="text"
+  [(ngModel)]="userName"
+  maxlength="20"
+  placeholder="type here to active"
+/><br /><br />
+<input
+  type="text"
+  [(ngModel)]="password"
+  maxlength="20"
+  placeholder="type here to active"
+/><br /><br />
+
+<h6>user name</h6>
+<p>{{ userName }}</p>
+<h6>password</h6>
+<p>{{ password }}</p>
+<br />
+
+<!-- exercise -->
+<!-- must need to import form module -->
+<button class="btn btn-dark" (click)="viewExercise()">view exercise</button
+><br /><br />
+
+<div [style.display]="bool ? '' : 'none'">
+  <input
+    type="text"
+    placeholder="post titel"
+    [(ngModel)]="postTitel"
+  /><br /><br />
+  <textarea
+    placeholder="Post Details"
+    [(ngModel)]="postDetails"
+    cols="23"
+  ></textarea
+  ><br /><br />
+  <input
+    type="text"
+    placeholder="post image url"
+    [(ngModel)]="postImage"
+  /><br /><br />
+  <input type="text" placeholder="post url" [(ngModel)]="postURL" /><br /><br />
+  <input type="checkbox" [(ngModel)]="check" (click)="checkBox()" />Add
+  Background<br /><br /><br />
+
+  <h6>post titel</h6>
+  <p>{{ postTitel }}</p>
+  <h6>post details</h6>
+  <p>{{ postDetails }}</p>
+  <img [src]="postImage" alt="" width="150" /><br /><br />
+  <a [href]="postURL" [class.edit-url]="check" class="mb-3">{{ postURL }}</a>
+</div>
