@@ -5,16 +5,16 @@ import { HomeComponent } from './home/home.component';
 import { IPostComponent } from './decorators/input-decorator/i-post/i-post.component';
 import { UPostComponent } from './decorators/output-decorator/u-post/u-post.component';
 
-import { DataBindingComponent } from './binding-methods/data-binding/data-binding.component';
-import { EventBindingComponent } from './binding-methods/event-binding/event-binding.component';
-import { TwoWayBindingComponent } from './binding-methods/two-way-binding/two-way-binding.component';
+import { DataBindingComponent } from './bindings/data-binding/data-binding.component';
+import { EventBindingComponent } from './bindings/event-binding/event-binding.component';
+import { TwoWayBindingComponent } from './bindings/two-way-binding/two-way-binding.component';
 
-import { NgForComponent } from './directive/ng-for/ng-for.component';
-import { ChangeDetectionComponent } from './directive/change-detection/change-detection.component';
-import { NgIfComponent } from './directive/ng-if/ng-if.component';
-import { NgSwitchCaseComponent } from './directive/ng-switch-case/ng-switch-case.component';
-import { NgStyleComponent } from './directive/ng-style/ng-style.component';
-import { NgClassComponent } from './directive/ng-class/ng-class.component';
+import { NgForComponent } from './directives/ng-for/ng-for.component';
+import { ChangeDetectionComponent } from './directives/change-detection/change-detection.component';
+import { NgIfComponent } from './directives/ng-if/ng-if.component';
+import { NgSwitchCaseComponent } from './directives/ng-switch-case/ng-switch-case.component';
+import { NgStyleComponent } from './directives/ng-style/ng-style.component';
+import { NgClassComponent } from './directives/ng-class/ng-class.component';
 
 import { PipesComponent } from './pipes/pipes.component';
 
