@@ -3,7 +3,8 @@
 
 <div class="main">
   <div class="page" *ngIf="option === 0">
-    <button class="btn btn-dark" (click)="onClick(1)">Decorator</button>
+    <button class="btn btn-dark" (click)="onClick(1)">Binding</button>
+    <button class="btn btn-dark" (click)="onClick(2)">Decorator</button>
   </div>
 
   <div [ngSwitch]="option">
@@ -18,6 +19,19 @@
       <h6>Two-Way Binding</h6>
       <button class="btn btn-dark" routerLink="/two-way-binding">
         Two-Way Binding</button
+      ><br />
+      <button class="btn btn-dark" (click)="onClick(0)">Go Back</button>
+    </div>
+
+    <div *ngSwitchCase="2" class="sub">
+      <button class="btn btn-dark" routerLink="/input-decorator">
+        Input Decorator
+      </button>
+      <button class="btn btn-dark" routerLink="/view-child-decorator">
+        ViewChild Decorator
+      </button>
+      <button class="btn btn-dark" routerLink="/output-decorator">
+        Output & Event Emitter Decorator</button
       ><br />
       <button class="btn btn-dark" (click)="onClick(0)">Go Back</button>
     </div>
