@@ -18,6 +18,7 @@ import { TwoWayBindingComponent } from './binding-methods/two-way-binding/two-wa
 import { NgForComponent } from './directive/ng-for/ng-for.component';
 import { ChangeDetectionComponent } from './directive/change-detection/change-detection.component';
 import { NgIfComponent } from './directive/ng-if/ng-if.component';
+import { NgSwitchCaseComponent } from './directive/ng-switch-case/ng-switch-case.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { NgIfComponent } from './directive/ng-if/ng-if.component';
     NgForComponent,
       ChangeDetectionComponent,
       NgIfComponent,
+      NgSwitchCaseComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
