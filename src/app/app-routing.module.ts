@@ -16,6 +16,8 @@ import { NgSwitchCaseComponent } from './directive/ng-switch-case/ng-switch-case
 import { NgStyleComponent } from './directive/ng-style/ng-style.component';
 import { NgClassComponent } from './directive/ng-class/ng-class.component';
 
+import { PipesComponent } from './pipes/pipes.component';
+
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
@@ -33,6 +35,8 @@ const routes: Routes = [
   { path: 'ng-switch-case-directive', component: NgSwitchCaseComponent },
   { path: 'ng-style-directive', component: NgStyleComponent },
   { path: 'ng-class-directive', component: NgClassComponent },
+
+  { path: 'pipes', component: PipesComponent },
 ];
 
 @NgModule({
