@@ -17,6 +17,7 @@ import { TwoWayBindingComponent } from './binding-methods/two-way-binding/two-wa
 
 import { NgForComponent } from './directive/ng-for/ng-for.component';
 import { ChangeDetectionComponent } from './directive/change-detection/change-detection.component';
+import { NgIfComponent } from './directive/ng-if/ng-if.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { ChangeDetectionComponent } from './directive/change-detection/change-de
 
     NgForComponent,
       ChangeDetectionComponent,
+      NgIfComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
