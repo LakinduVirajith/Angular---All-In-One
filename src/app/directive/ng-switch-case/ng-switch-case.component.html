@@ -1,0 +1,16 @@
+<h4>NgSwitchCase Example</h4>
+<br />
+
+<div class="d-flex justify-content-around">
+  <button class="btn btn-dark" (click)="onClick(1)">step 1</button>
+  <button class="btn btn-dark" (click)="onClick(2)">step 2</button>
+  <button class="btn btn-dark" (click)="onClick(3)">step 3</button>
+</div>
+<br />
+
+<div [ngSwitch]="stepForm">
+  <div *ngSwitchCase="1">step 1 form</div>
+  <div *ngSwitchCase="2">step 2 form</div>
+  <div *ngSwitchCase="3">step 3 form</div>
+  <div *ngSwitchDefault>step isn't select</div>
+</div>

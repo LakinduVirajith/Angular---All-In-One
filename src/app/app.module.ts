@@ -15,6 +15,13 @@ import { DataBindingComponent } from './binding-methods/data-binding/data-bindin
 import { EventBindingComponent } from './binding-methods/event-binding/event-binding.component';
 import { TwoWayBindingComponent } from './binding-methods/two-way-binding/two-way-binding.component';
 
+import { NgForComponent } from './directive/ng-for/ng-for.component';
+import { ChangeDetectionComponent } from './directive/change-detection/change-detection.component';
+import { NgIfComponent } from './directive/ng-if/ng-if.component';
+import { NgSwitchCaseComponent } from './directive/ng-switch-case/ng-switch-case.component';
+import { NgStyleComponent } from './directive/ng-style/ng-style.component';
+import { NgClassComponent } from './directive/ng-class/ng-class.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +35,13 @@ import { TwoWayBindingComponent } from './binding-methods/two-way-binding/two-wa
     DataBindingComponent,
     EventBindingComponent,
     TwoWayBindingComponent,
+
+    NgForComponent,
+      ChangeDetectionComponent,
+      NgIfComponent,
+      NgSwitchCaseComponent,
+      NgStyleComponent,
+      NgClassComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
