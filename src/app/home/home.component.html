@@ -6,6 +6,7 @@
     <button class="btn btn-dark" (click)="onClick(1)">Decorator</button>
     <button class="btn btn-dark" (click)="onClick(2)">Binding</button>
     <button class="btn btn-dark" (click)="onClick(3)">Directive</button>
+    <button class="btn btn-dark" [routerLink]="['/pipes']" >Pipes</button>
   </div>
 
   <div [ngSwitch]="option">

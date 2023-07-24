@@ -21,6 +21,9 @@ import { NgIfComponent } from './directive/ng-if/ng-if.component';
 import { NgSwitchCaseComponent } from './directive/ng-switch-case/ng-switch-case.component';
 import { NgStyleComponent } from './directive/ng-style/ng-style.component';
 import { NgClassComponent } from './directive/ng-class/ng-class.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { AppendPipe } from './pipes/append/append.pipe';
+import { SummaryPipe } from './pipes/summary/summary.pipe';
 
 @NgModule({
   declarations: [
@@ -42,6 +45,9 @@ import { NgClassComponent } from './directive/ng-class/ng-class.component';
       NgSwitchCaseComponent,
       NgStyleComponent,
       NgClassComponent,
+      PipesComponent,
+      AppendPipe,
+      SummaryPipe,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],

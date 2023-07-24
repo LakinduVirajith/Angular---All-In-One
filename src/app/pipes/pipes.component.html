@@ -1,0 +1,59 @@
+<h4>Pipes Examples</h4><br />
+
+<h6>
+    uppercase pipe - <span>{{pipeType1 | uppercase}}</span>
+</h6>
+<h6>
+    lowercase pipe - <span>{{pipeType1 | lowercase}}</span>
+</h6>
+<h6>
+    number pipe - <span>{{pipeType2 | number}}</span>
+</h6>
+<h6>
+    number pipe - <span>{{pipeType3 | number: '2.3-3'}}</span>
+</h6>
+<h6>
+    currency pipe - <span>{{pipeType4 | currency}}</span>
+</h6>
+<h6>
+    currency pipe - <span>{{pipeType4 | currency: 'JPY'}}</span>
+</h6>
+<h6>
+    currency pipe - <span>{{pipeType4 | currency: 'USD' : false}}</span>
+</h6>
+<h6>
+    currency pipe - <span>{{pipeType4 | currency: 'USD' : true : '2.1-1'}}</span>
+</h6>
+<h6>
+    date pipe - <span>{{pipeType5 | date}}</span>
+</h6>
+<h6>
+    date pipe - <span>{{pipeType5 | date: 'short'}}</span>
+</h6>
+<h6>
+    date pipe - <span>{{pipeType5 | date: 'shortDate'}}</span>
+</h6>
+<h6>
+    date pipe - <span>{{pipeType5 | date: 'shortTime'}}</span>
+</h6>
+<h6>
+    json pipe - <span>{{pipeType6 | json}}</span>
+</h6>
+<h6>
+    percent pipe - <span>{{pipeType7 | percent}}</span>
+</h6>
+<h6>
+    percent pipe - <span>{{pipeType7 | percent: '2.2-2'}}</span>
+</h6>
+<h6>
+    slice pipe - <span>{{pipeType8 | slice: 1:3}}</span>
+</h6><br /><br />
+<h6>
+    custom pipe - <span>{{customPipe1.city | append}}</span>
+</h6>
+<h6>
+    custom pipe - <span>{{customPipe2 | summary}}</span>
+</h6>
+<h6>
+    custom pipe - <span>{{customPipe2 | summary : 20}}</span>
+</h6>
