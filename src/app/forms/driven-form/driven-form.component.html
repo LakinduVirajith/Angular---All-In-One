@@ -1,0 +1,47 @@
+<h4 class="mt-2">Driven Form Example</h4><br />
+<!-- must need to import form module -->
+
+<div class="container">
+    <div class="form-area">
+        <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+            <!-- user name -->
+            <label class="d-flex">First Name</label>
+            <input class="form-control is-invalid mb-2" type="text" placeholder="Full Name" name="fullName" ngModel #fullName="ngModel" (ngModelChange)="firstNameHandle(fullName)" [ngClass]="{'is-invalid': fullName.invalid && fullName.touched}" minlength="3" maxlength="20" required>
+            <div *ngIf="fullName.errors && fullName.errors['required']">
+                <div class="text text-danger d-flex mb-1" *ngIf="fullName.invalid && fullName.touched">
+                    Full Name is Required
+                </div>
+            </div>
+            <div *ngIf="fullName.errors && fullName.errors['minlength']">
+                <div class="text text-danger d-flex mb-1" *ngIf="fullName.invalid && fullName.touched">
+                    Full Name Must be at Least 5 Characters
+                </div>
+            </div>
+            
+            <!-- email -->
+            <label class="d-flex">Email</label>
+            <input class="form-control is-invalid mb-2" type="email" placeholder="Email" name="email" ngModel #email="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" (ngModelChange)="emailHandle(email)" [ngClass]="{'is-invalid': email.invalid && email.touched}" required>
+            <div *ngIf="email.errors && email.errors['required']">
+                <div class="text text-danger d-flex mb-1" *ngIf="email.invalid && email.touched">
+                    Email is Required
+                </div>
+            </div>
+            <div *ngIf="email.errors && email.errors['pattern']">
+                <div class="text text-danger d-flex mb-1" *ngIf="email.invalid && email.touched">
+                    Not a Valid Email
+                </div>
+            </div>
+
+            <!-- address -->
+            <label class="d-flex">Address</label>
+            <textarea class="form-control is-invalid mb-2" id="address" cols="30" rows="5" placeholder="Address" name="address" ngModel #address="ngModel" (ngModelChange)="addressHadle(address)" [ngClass]="{'is-invalid': address.invalid && address.touched}" required></textarea>
+            <div *ngIf="address.errors && address.errors['required']">
+                <div class="text text-danger d-flex mb-1" *ngIf="address.invalid && address.touched">
+                    Address is Required
+                </div>
+            </div>
+            
+            <button class="btn btn-dark mt-2 w-100" type="submit" [disabled]="form.invalid">submit</button>
+        </form>
+    </div>
+</div>

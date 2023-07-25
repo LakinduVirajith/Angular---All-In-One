@@ -17,6 +17,7 @@ import { NgStyleComponent } from './directives/ng-style/ng-style.component';
 import { NgClassComponent } from './directives/ng-class/ng-class.component';
 
 import { PipesComponent } from './pipes/pipes.component';
+import { DrivenFormComponent } from './forms/driven-form/driven-form.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -37,6 +38,8 @@ const routes: Routes = [
   { path: 'ng-class-directive', component: NgClassComponent },
 
   { path: 'pipes', component: PipesComponent },
+
+  { path: 'driven-form', component: DrivenFormComponent },
 ];
 
 @NgModule({

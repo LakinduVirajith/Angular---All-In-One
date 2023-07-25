@@ -21,9 +21,12 @@ import { NgIfComponent } from './directives/ng-if/ng-if.component';
 import { NgSwitchCaseComponent } from './directives/ng-switch-case/ng-switch-case.component';
 import { NgStyleComponent } from './directives/ng-style/ng-style.component';
 import { NgClassComponent } from './directives/ng-class/ng-class.component';
+
 import { PipesComponent } from './pipes/pipes.component';
 import { AppendPipe } from './pipes/append/append.pipe';
 import { SummaryPipe } from './pipes/summary/summary.pipe';
+import { DrivenFormComponent } from './forms/driven-form/driven-form.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -40,16 +43,18 @@ import { SummaryPipe } from './pipes/summary/summary.pipe';
     TwoWayBindingComponent,
 
     NgForComponent,
-      ChangeDetectionComponent,
-      NgIfComponent,
-      NgSwitchCaseComponent,
-      NgStyleComponent,
-      NgClassComponent,
-      PipesComponent,
-      AppendPipe,
-      SummaryPipe,
+    ChangeDetectionComponent,
+    NgIfComponent,
+    NgSwitchCaseComponent,
+    NgStyleComponent,
+    NgClassComponent,
+
+    PipesComponent,
+    AppendPipe,
+    SummaryPipe,
+    DrivenFormComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, NgbModule],
   providers: [],
   bootstrap: [AppComponent],
 })
