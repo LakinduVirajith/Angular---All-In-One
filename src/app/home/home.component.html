@@ -8,9 +8,13 @@
     <button class="btn btn-dark" (click)="onClick(3)">Directives</button>
     <button class="btn btn-dark" [routerLink]="['/pipes']">Pipes</button>
     <button class="btn btn-dark" (click)="onClick(4)" >Forms</button>
+    <button class="btn btn-dark" [routerLink]="['/']">Services</button>
+    <button class="btn btn-dark" [routerLink]="['/']">Auth Guard</button>
+    <button class="btn btn-dark" [routerLink]="['/']">Observable</button>
   </div>
 
   <div [ngSwitch]="option">
+    <!-- decorators -->
     <div *ngSwitchCase="1" class="sub">
       <button class="btn btn-dark" routerLink="/input-decorator">Input Decorator</button>
       <button class="btn btn-dark" routerLink="/output-decorator">Output & Event Emitter Decorator</button>
@@ -18,6 +22,7 @@
       <button class="btn btn-dark" (click)="onClick(0)">Go Back</button>
     </div>
 
+    <!-- bindings -->
     <div *ngSwitchCase="2" class="sub">
       <h6>One-Way Binding</h6>
       <button class="btn btn-dark" routerLink="/data-binding">Data Binding</button>
@@ -28,6 +33,7 @@
       <button class="btn btn-dark" (click)="onClick(0)">Go Back</button>
     </div>
 
+    <!-- directives -->
     <div *ngSwitchCase="3" class="sub">
       <h6>Structural Directive</h6>
       <button class="btn btn-dark" routerLink="/ng-for-directive">NgFor Directive</button>
@@ -41,6 +47,7 @@
       <button class="btn btn-dark" (click)="onClick(0)">Go Back</button>
     </div>
 
+    <!-- forms -->
     <div *ngSwitchCase="4" class="sub">
       <button class="btn btn-dark" routerLink="/driven-form">Driven Form</button>
       <button class="btn btn-dark" routerLink="/reactive-form">Reactive Form</button>
