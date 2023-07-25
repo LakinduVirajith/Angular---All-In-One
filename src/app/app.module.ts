@@ -30,6 +30,7 @@ import { SummaryPipe } from './pipes/summary/summary.pipe';
 import { DrivenFormComponent } from './forms/driven-form/driven-form.component';
 import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.component';
 import { ReactiveFormWithFormBuilderComponent } from './forms/reactive-form-with-form-builder/reactive-form-with-form-builder.component';
+import { FormWithCustomValidationsComponent } from './forms/form-with-custom-validations/form-with-custom-validations.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { ReactiveFormWithFormBuilderComponent } from './forms/reactive-form-with
     DrivenFormComponent,
     ReactiveFormComponent,
     ReactiveFormWithFormBuilderComponent,
+    FormWithCustomValidationsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, NgbModule],
   providers: [],

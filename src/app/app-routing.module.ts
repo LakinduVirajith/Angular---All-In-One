@@ -20,6 +20,7 @@ import { PipesComponent } from './pipes/pipes.component';
 import { DrivenFormComponent } from './forms/driven-form/driven-form.component';
 import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.component';
 import { ReactiveFormWithFormBuilderComponent } from './forms/reactive-form-with-form-builder/reactive-form-with-form-builder.component';
+import { FormWithCustomValidationsComponent } from './forms/form-with-custom-validations/form-with-custom-validations.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -44,6 +45,7 @@ const routes: Routes = [
   { path: 'driven-form', component: DrivenFormComponent },
   { path: 'reactive-form', component: ReactiveFormComponent },
   { path: 'reactive-form-with-form-builder', component: ReactiveFormWithFormBuilderComponent },
+  { path: 'form-with-custom-validations', component: FormWithCustomValidationsComponent },
 ];
 
 @NgModule({
