@@ -1,0 +1,68 @@
+<hr />
+<h4>Reactive Form Example</h4>
+<hr />
+
+<div class="container">
+    <!-- important - remember to import the reactive form module to the app module -->
+    <div class="form-area">
+        <!-- form group example -->
+        <form [formGroup]="rForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label class="d-flex mb-1">Full Name</label>
+                <input class="form-control is-invalid mb-2" type="text" placeholder="Alice Johnson" formControlName="fullName" [ngClass]="{'is-invalid': rForm.get('fullName').invalid && rForm.get('fullName').touched}" minlength="3" maxlength="20">
+                <div class="text text-danger error-text" *ngIf="rForm.get('fullName').touched || rForm.get('fullName').dirty">
+                    <div  class="d-flex mb-2" *ngIf="rForm.get('fullName').errors?.['required']">Full Name is Required</div>
+                    <div  class="d-flex mb-2" *ngIf="rForm.get('fullName').errors?.['minlength']">Full Name Must be at Least 3 Characters</div>
+                    <div  class="d-flex mb-2" *ngIf="rForm.get('fullName').errors?.['maxlength']">Full Name Can't be more than 20 Characters</div>
+                </div>
+
+                <label class="d-flex mb-1">Email</label>
+                <input class="form-control is-invalid mb-2" type="email" placeholder="alice.johnson@example.com" formControlName="email" [ngClass]="{'is-invalid': rForm.get('email').invalid && rForm.get('email').touched}" maxlength="40">
+                <div class="text text-danger error-text" *ngIf="rForm.get('email').touched || rForm.get('email').dirty">
+                    <div  class="d-flex mb-2" *ngIf="rForm.get('email').errors?.['required']">Email is Required</div>
+                    <div  class="d-flex mb-2" *ngIf="rForm.get('email').errors?.['pattern']">Not a Valid Email</div>
+                    <div  class="d-flex mb-2" *ngIf="rForm.get('email').errors?.['maxlength']">Email Can't be more than 40 Characters</div>
+                </div>
+
+                 <!-- nested form group example -->
+                <div formGroupName="contactDetails">
+                    <label class="d-flex mb-1">Address</label>
+                    <textarea class="form-control is-invalid mb-2" id="address" cols="30" rows="5" placeholder="1234 Willow Street, Apt 56" formControlName="address" [ngClass]="{'is-invalid': rForm.get('contactDetails.address').invalid && rForm.get('contactDetails.address').touched}" maxlength="180"></textarea>
+                    <div class="text text-danger error-text" *ngIf="rForm.get('contactDetails.address').touched || rForm.get('contactDetails.address').dirty">
+                        <div  class="d-flex mb-2" *ngIf="rForm.get('contactDetails.address').errors?.['required']">Address is Required</div>
+                        <div  class="d-flex mb-2" *ngIf="rForm.get('contactDetails.address').errors?.['maxlength']">Address Can't be more than 180 Characters</div>
+                    </div>
+
+                    <label class="d-flex mb-1">Shipping Address</label>
+                    <textarea class="form-control is-invalid mb-2" id="Shipping" cols="30" rows="5" placeholder="789 Elm Avenue, Suite 102" formControlName="shippingAddress" [ngClass]="{'is-invalid': rForm.get('contactDetails.shippingAddress').invalid && rForm.get('contactDetails.shippingAddress').touched}" maxlength="180"></textarea>
+                    <div class="text text-danger error-text" *ngIf="rForm.get('contactDetails.shippingAddress').touched || rForm.get('contactDetails.shippingAddress').dirty">
+                        <div  class="d-flex mb-2" *ngIf="rForm.get('contactDetails.shippingAddress').errors?.['required']">Shipping Address is Required</div>
+                        <div  class="d-flex mb-2" *ngIf="rForm.get('contactDetails.shippingAddress').errors?.['maxlength']">Shipping Address Can't be more than 180 Characters</div>
+                    </div>
+
+                    <label class="d-flex mb-1">Contact Number</label>
+                    <input class="form-control is-invalid mb-2" type="text" placeholder="077 805 0080" formControlName="contactNo" [ngClass]="{'is-invalid': rForm.get('contactDetails.contactNo').invalid && rForm.get('contactDetails.contactNo').touched}" minlength="3" maxlength="20">
+                    <div class="text text-danger error-text" *ngIf="rForm.get('contactDetails.contactNo').touched || rForm.get('contactDetails.contactNo').dirty">
+                        <div  class="d-flex mb-2" *ngIf="rForm.get('contactDetails.contactNo').errors?.['required']">Contact Number is Required</div>
+                        <div  class="d-flex mb-2" *ngIf="rForm.get('contactDetails.contactNo').errors?.['pattern']">Not a Valid Contact Number</div>
+                        <div  class="d-flex mb-2" *ngIf="rForm.get('contactDetails.contactNo').errors?.['minlength']">Contact Number Must be at Least 7 Characters</div>
+                        <div  class="d-flex mb-2" *ngIf="rForm.get('contactDetails.contactNo').errors?.['maxlength']">Contact Number Can't be more than 15 Characters</div>
+                    </div>
+                </div>
+
+                <!-- form array example -->
+                <label class="d-flex mb-1">Skills</label>
+                <input type="text" class="form-control mb-2" #skill (keyup.enter)="addSkill(skill.value)">
+
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between mb-2" *ngFor="let skill of rForm.get('skills').controls; let i = index;">
+                        {{ skill.value }}
+                        <button class="btn btn-dark" (click)="removeSkill(i)">Remove</button>
+                    </li>
+                </ul>
+
+                <button class="btn btn-dark mt-2 mb-4 w-100" [disabled]="rForm.invalid">SUBMIT</button>
+            </div>
+        </form>
+    </div>
+</div>
