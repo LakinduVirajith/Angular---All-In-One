@@ -1,7 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
 
 body {
-  margin-top: 2rem;
+  margin-top: 1rem;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -23,5 +24,6 @@ input {
   border-width: 1px;
 }
 
-/* Importing Bootstrap SCSS file. */
-@import 'bootstrap/scss/bootstrap';
+.error-text{
+  font-size: 14px;
+}

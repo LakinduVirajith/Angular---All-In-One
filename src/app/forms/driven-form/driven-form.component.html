@@ -1,11 +1,14 @@
-<h4 class="mt-2">Driven Form Example</h4><br />
-<!-- must need to import form module -->
+<hr />
+<h4>Driven Form Example</h4>
+<hr />
+
 
 <div class="container">
+    <!-- important - remember to import the form module to the app module -->
     <div class="form-area">
         <form #form="ngForm" (ngSubmit)="onSubmit(form)">
             <!-- user name -->
-            <label class="d-flex">First Name</label>
+            <label class="d-flex">Full Name</label>
             <input class="form-control is-invalid mb-2" type="text" placeholder="Full Name" name="fullName" ngModel #fullName="ngModel" (ngModelChange)="firstNameHandle(fullName)" [ngClass]="{'is-invalid': fullName.invalid && fullName.touched}" minlength="3" maxlength="20" required>
             <div *ngIf="fullName.errors && fullName.errors['required']">
                 <div class="text text-danger d-flex mb-1" *ngIf="fullName.invalid && fullName.touched">

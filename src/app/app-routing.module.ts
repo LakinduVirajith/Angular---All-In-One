@@ -18,6 +18,7 @@ import { NgClassComponent } from './directives/ng-class/ng-class.component';
 
 import { PipesComponent } from './pipes/pipes.component';
 import { DrivenFormComponent } from './forms/driven-form/driven-form.component';
+import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -40,6 +41,7 @@ const routes: Routes = [
   { path: 'pipes', component: PipesComponent },
 
   { path: 'driven-form', component: DrivenFormComponent },
+  { path: 'reactive-form', component: ReactiveFormComponent },
 ];
 
 @NgModule({

@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './home/home.component';
 
 import { IPostComponent } from './decorators/input-decorator/i-post/i-post.component';
@@ -25,8 +26,9 @@ import { NgClassComponent } from './directives/ng-class/ng-class.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { AppendPipe } from './pipes/append/append.pipe';
 import { SummaryPipe } from './pipes/summary/summary.pipe';
+
 import { DrivenFormComponent } from './forms/driven-form/driven-form.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +54,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     PipesComponent,
     AppendPipe,
     SummaryPipe,
+
     DrivenFormComponent,
+    ReactiveFormComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, NgbModule],
   providers: [],
