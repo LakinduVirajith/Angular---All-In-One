@@ -11,6 +11,7 @@ export class DrivenFormComponent {
 
   onSubmit(form: NgForm){
     console.log(form);
+    console.log(form.value);
   }
 
   firstNameHandle(form: FormsModule){

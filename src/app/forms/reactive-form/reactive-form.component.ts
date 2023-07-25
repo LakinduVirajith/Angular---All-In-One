@@ -40,5 +40,6 @@ export class ReactiveFormComponent {
 
   onSubmit(){
     console.log(this.rForm);
+    console.log(this.rForm.value);
   }
 }

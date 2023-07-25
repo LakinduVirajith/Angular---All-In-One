@@ -29,6 +29,7 @@ import { SummaryPipe } from './pipes/summary/summary.pipe';
 
 import { DrivenFormComponent } from './forms/driven-form/driven-form.component';
 import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.component';
+import { ReactiveFormWithFormBuilderComponent } from './forms/reactive-form-with-form-builder/reactive-form-with-form-builder.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.compo
 
     DrivenFormComponent,
     ReactiveFormComponent,
+    ReactiveFormWithFormBuilderComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, NgbModule],
   providers: [],
