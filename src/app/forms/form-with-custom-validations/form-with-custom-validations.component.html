@@ -4,7 +4,7 @@
 
 <div class="container">
     <form [formGroup]="form">
-        <!-- user name -->
+        <!-- USER NAME -->
         <div class="from-group">
             <label class="d-flex mb-1">User Name</label>
             <input type="text" class="form-control mb-2" formControlName="userName" placeholder="Alice Johnson">
@@ -14,7 +14,7 @@
             <div  class="d-flex mb-2" *ngIf="fc.userName.errors?.['minlength']">User Name Must be at Least 3 Characters</div>
         </div>
 
-        <!-- password -->
+        <!-- PASSWORD -->
         <div class="from-group">
             <label class="d-flex mb-1">Password</label>
             <input type="text" class="form-control mb-2" formControlName="password" placeholder="xxxxxxxxxx">

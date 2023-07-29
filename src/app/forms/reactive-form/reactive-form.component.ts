@@ -12,19 +12,19 @@ export class ReactiveFormComponent {
   contactRegex: string = "[0-9]+";
 
   constructor(){
-    /* form group */
+    /* FORM GROUP */
     this.rForm = new FormGroup({
       fullName: new FormControl ('', [Validators.required, Validators.minLength(3), Validators.maxLength(19)]),
       email: new FormControl ('', [Validators.required, Validators.maxLength(39), Validators.pattern(this.emailRegex)]),
 
-      /* nested form group */
+      /* NESTED FORM GROUP */
       contactDetails: new FormGroup({
         address: new FormControl('', [Validators.required, Validators.maxLength(179)]),
         shippingAddress: new FormControl('', [Validators.required, Validators.maxLength(179)]),
         contactNo: new FormControl('', [Validators.required, Validators.minLength(7), Validators.maxLength(15), Validators.pattern(this.contactRegex)])
       }),
 
-      /* form array */
+      /* FORM ARRAY */
       skills: new FormArray([])
     });
   }

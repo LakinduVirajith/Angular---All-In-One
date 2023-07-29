@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./i-post.component.scss'],
 })
 export class IPostComponent {
-  /* parent message */
+  /* PARENT MESSAGE */
   fromParent: string = 'message from post parent to post-list child';
 }

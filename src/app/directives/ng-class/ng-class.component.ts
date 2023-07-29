@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class NgClassComponent {
   isActive: boolean = true;
 
-  /* exercise */
+  /* EXERCISE */
   click: boolean = false;
   onClick(){
     this.click = !this.click;

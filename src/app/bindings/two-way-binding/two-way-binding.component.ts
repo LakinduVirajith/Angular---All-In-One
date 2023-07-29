@@ -6,11 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./two-way-binding.component.scss'],
 })
 export class TwoWayBindingComponent {
-  /* two-way data binding */
+  /* TWO-WAY DATA BINDING */
   userName!: string;
   password!: string;
 
-  /* exercise */
+  /* EXERCISE */
   bool: boolean = false;
   viewExercise() {
     this.bool = !this.bool;

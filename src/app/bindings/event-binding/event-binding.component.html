@@ -1,6 +1,7 @@
-<h4>Event Binding Examples</h4>
+<h4>Event Binding Examples</h4><br />
 
-<!-- binding to event -->
+<!-- BINDING TO EVENT -->
+<h5>Binding To Evenet</h5>
 <div class="border">
   <button class="btn btn-dark" (click)="clickBindingHandle()">
     click binding
@@ -8,17 +9,13 @@
   <p class="mt-1">{{ clickBinding }}</p>
 </div>
 
-<!-- binding to keyboard event -->
+<!-- BINDING TO KEYBOARD EVENET -->
+<h5>Binding To Keyboard Evenet</h5>
 <div class="border">
-  <input
-    type="text"
-    (keydown.shift)="onKeydown($event)"
-    [value]="keyboardEvent"
-    placeholder="press shift to run"
-  />
-</div>
+  <input type="text" class="form-control" (keydown.shift)="onKeydown($event)" [value]="keyboardEvent" placeholder="press shift to run"/>
+</div><br >
 
-<!-- full list of angular events -->
+<!-- FULL LIST OF ANGULAR EVENTS -->
 <h4>Full List of Angular Events</h4>
 
 <div class="border">

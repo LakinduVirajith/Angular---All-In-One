@@ -6,25 +6,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./data-binding.component.scss'],
 })
 export class DataBindingComponent {
-  /* string interpolation */
+  /* STRING INTERPOLATION */
   message: string = 'string interpolation';
 
-  /* property binding */
+  /* PROPERTY BINDING */
   imgUrl: string = '/assets/property-binding.jpg';
+  isDisabled: boolean = true;
 
-  /* class binding */
+  /* CLASS BINDING */
   bool: boolean = true;
   classBinding() {
     this.bool = !this.bool;
   }
 
-  /* style binding */
+  /* STYLE BINDING */
   boolClass: boolean = false;
   styleBinding() {
     this.boolClass = !this.boolClass;
   }
 
-  /* template variable */
+  /* TEMPLATE VARIABLE */
   variable!: string;
   onKeyup(username: string) {
     this.variable = username;
