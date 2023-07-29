@@ -6,7 +6,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./u-post-list.component.scss'],
 })
 export class UPostListComponent {
-  /* child message */
+  /* CHILD MESSAGE */
   childMessage: string = 'message from post-list child to post parent';
   @Output() messageEvent = new EventEmitter<string>();
 

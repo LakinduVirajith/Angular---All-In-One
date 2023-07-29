@@ -1,0 +1,29 @@
+<h4>Services and Dependency Injection Example</h4><br />
+
+<!-- INPUTS -->
+<div class="d-flex">
+    <h5 class="w-50">Number 1</h5>
+    <h5 class="w-50">Number 2</h5>
+</div>
+<div class="d-flex">
+    <input class="form-control mx-4" type="number" [(ngModel)]="number1">
+    <input class="form-control mx-4" type="number" [(ngModel)]="number2">
+</div><br /><br />
+
+<!-- OPERATIONS -->
+<div class="d-flex">
+    <button  class="btn btn-dark w-50 mx-4" (click)="addOperation()"><h4>+</h4></button>
+    <button  class="btn btn-dark w-50 mx-4" (click)="subtractOperation()"><h4>-</h4></button>
+</div><br />
+<div class="d-flex">
+    <button  class="btn btn-dark w-50 mx-4" (click)="multiplyOperation()"><h4>*</h4></button>
+    <button  class="btn btn-dark w-50 mx-4" (click)="divideOperation()"><h4>/</h4></button>
+</div><br /><br />
+
+<!-- ANSWER -->
+<div class="d-flex" *ngIf="answer !== 0 && showResult">
+    <h5 class="mx-4 w-50 mt-2">Answer is: {{answer}}</h5>
+    <button  class="btn btn-dark w-50 mx-4" (click)="clearHandle()">
+        <h5 class="mb-0 py-1">Clear</h5>
+    </button>
+</div>

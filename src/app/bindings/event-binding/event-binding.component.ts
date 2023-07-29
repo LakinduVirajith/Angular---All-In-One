@@ -6,13 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./event-binding.component.scss'],
 })
 export class EventBindingComponent {
-  /* binding to event */
+  /* BINDING TO EVENT */
   clickBinding!: string;
   clickBindingHandle() {
     this.clickBinding = 'click event binding worked successfully!';
   }
 
-  /* binding to keyboard event */
+  /* BINDING TO KEYBOARD EVENET */
   keyboardEvent: string = '';
   onKeydown($event: any) {
     this.keyboardEvent = 'keyboard event binding worked successfully!';

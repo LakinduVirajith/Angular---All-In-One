@@ -6,6 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./i-post-list.component.scss'],
 })
 export class IPostListComponent {
-  /* get parent message */
+  /* GET PARENT MESSAGE */
   @Input() fromPost!: string;
 }

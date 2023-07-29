@@ -1,6 +1,6 @@
-<h4>NgIf Example</h4>
+<h4>NgIf Example</h4><br />
 
-<!-- ng-if -->
+<!-- NgIf -->
 <button class="btn btn-dark" (click)="addPost()">add post</button>
 <button class="btn btn-dark" style="margin-left: 12px" (click)="removePost()">
   remove post</button
@@ -13,20 +13,19 @@
 </div>
 <div *ngIf="arrayObj.length == 0">
   <p>there is no data to fetch...</p>
-</div>
+</div><br />
 
+<!-- NgIf USING TEMPLATE DIRECTIVE -->
 <h4>NgIf Using Template Directive</h4>
 <br />
-
-<!-- ng-if using template directive -->
-<button class="btn btn-dark" (click)="addPost()">add post</button>
-<button class="btn btn-dark" style="margin-left: 12px" (click)="removePost()">
+<button class="btn btn-dark" (click)="addPostTem()">add post</button>
+<button class="btn btn-dark" style="margin-left: 12px" (click)="removePostTem()">
   remove post</button
 ><br /><br />
 
-<div *ngIf="arrayObj.length > 0; else noData">
+<div *ngIf="arrayObjTem.length > 0; else noData">
   <ul style="width: fit-content; margin: auto">
-    <li *ngFor="let post of arrayObj; let i = index">{{ post }}</li>
+    <li *ngFor="let post of arrayObjTem; let i = index">{{ post }}</li>
   </ul>
 </div>
 <ng-template #noData>

@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 export class NgIfComponent {
   postValue: number = 0;
   arrayObj: Array<any> = [];
+  postValueTem: number = 0;
+  arrayObjTem: Array<any> = [];
 
   addPost() {
     this.postValue++;
@@ -16,5 +18,14 @@ export class NgIfComponent {
   removePost() {
     this.arrayObj.pop();
     this.postValue--;
+  }
+
+  addPostTem() {
+    this.postValueTem++;
+    this.arrayObjTem.push('post ' + this.postValueTem);
+  }
+  removePostTem() {
+    this.arrayObjTem.pop();
+    this.postValueTem--;
   }
 }

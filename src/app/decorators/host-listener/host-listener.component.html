@@ -1,0 +1,54 @@
+<h4>Host Listener Examples</h4><br />
+
+<div class="row">
+    <div class="col-6">
+        <div class="border"><h6>Click Listener</h6></div>
+        <div class="border"><h6>Double Click Listener</h6></div>
+        <div class="border"><h6>Mouse Enter Listener</h6></div>
+        <div class="border"><h6>Mouse Leave Listener</h6></div>
+        <div class="border"><h6>Mouse Move Listener</h6></div>
+        <div class="border"><h6>Keyup Listener</h6></div>
+        <div class="border"><h6>Keydown Listener</h6></div>
+        <div class="border"><h6>Scroll Listener</h6></div>
+        <div class="border"><h6>Resized Listener</h6></div>
+    </div>
+    <div class="col-6">
+        <div class="border">
+            <button class="btn btn-dark" appClickListener>Click Me</button>
+        </div>
+        <div class="border">
+            <button class="btn btn-dark" appDoubleClickListener>Double Click Me</button>
+        </div>
+        <div class="border" appMouseenterListener>
+                Hover over me
+            </div>
+        <div class="border" appMouseleaveListener>
+                Leave over me
+            </div>
+        <div class="border" appMousemoveListener (mousePositionChange)="onMousePositionChange($event)">
+                <div class="mb-3">
+                    Move the mouse to trigger listener
+                </div>
+                <h6>{{mousePosition}}</h6>
+            </div>
+        <div class="border" appKeyupListener>
+                <h6>Press any key and release</h6> while focusing to see listener
+            </div>
+        <div class="border" appKeydownListener>
+            <h6>Press any key</h6> while focusing to see listener
+        </div>
+        <div class="border" appScrollListener (scrollPositionChange)="onScrollPositionChange($event)">
+            <div class="mb-3">
+                Scroll your browser windows to trigger listener
+            </div>
+            <h6>{{scrollPosition}}</h6> 
+        </div>
+        <div class="border" appResizedListener (windowResizedChange)="onWindowResizedChange($event)">
+            <div class="mb-3">
+                Resize your browser windows to trigger listener
+            </div>
+            <h6>{{windowResized}}</h6> 
+        </div>
+    </div>
+</div>
+<br />

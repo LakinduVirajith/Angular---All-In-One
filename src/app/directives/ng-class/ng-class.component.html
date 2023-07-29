@@ -4,33 +4,39 @@
   This is a NgClass Directive - Look at the code
 </h6><br />
 
-<!-- exercise  -->
+<!-- EXERCISE  -->
 <button class="btn btn-dark" (click)="onClick()">view exercise</button><br /><br />
 
 <div *ngIf="click">
   <h4>User Deatils</h4><br />
-  <input type="text" placeholder="user name" [(ngModel)]="name"><br /><br />
-  <input type="email" placeholder="dev@gmail.com" [(ngModel)]="email"><br /><br />
-  <textarea name="address" cols="23" rows="5" placeholder="address" [(ngModel)]="address"></textarea><br /><br />
+  <input type="text" placeholder="user name" [(ngModel)]="name" class="form-control"><br />
+  <input type="email" placeholder="dev@gmail.com" [(ngModel)]="email" class="form-control"><br />
+  <textarea name="address" cols="23" rows="5" placeholder="address" [(ngModel)]="address" class="form-control"></textarea><br /><br />
   <button class="btn btn-dark" (click)="onSubmit()">save data</button><br /><br />
 
-  <div *ngIf="userDetails.length > 0; else noData">
-    <th style="display: flex; justify-content: space-between">
-      <h6>#</h6>
-      <h6>name</h6>
-      <h6>email</h6>
-      <h6>address</h6>
-      <h6>action</h6>
-    </th>
-    <tr style="display: flex; justify-content: space-between" *ngFor="let user of userDetails; let i = index">
-      <h6>{{i + 1}}</h6>
-      <h6>{{user.name}}</h6>
-      <h6>{{user.email}}</h6>
-      <h6>{{user.address}}</h6>
-      <h6>
-        <button class="btn btn-dark" (click)="deleteRow(i)">delete</button>
-      </h6>
-    </tr>
+  <div *ngIf="userDetails.length > 0; else noData" class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>name</th>
+          <th>email</th>
+          <th>address</th>
+          <th>action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of userDetails; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.address }}</td>
+          <td>
+            <button class="btn btn-dark" (click)="deleteRow(i)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
   <ng-template #noData>
     <h6>no data to show</h6>

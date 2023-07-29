@@ -1,55 +1,31 @@
-<h4>Two-Way Binding Examples</h4>
+<h4>Two-Way Binding Examples</h4><br />
 
-<!-- two-way data binding -->
-<input
-  type="text"
-  [(ngModel)]="userName"
-  maxlength="20"
-  placeholder="type here to active"
-/><br /><br />
-<input
-  type="text"
-  [(ngModel)]="password"
-  maxlength="20"
-  placeholder="type here to active"
-/><br /><br />
+<!-- TWO-WAY DATA BINDING -->
+<input type="text" [(ngModel)]="userName" maxlength="20" placeholder="type here to active" class="form-control" /><br />
+<input type="password" [(ngModel)]="password" maxlength="20" placeholder="type here to active" class="form-control" /><br /><br />
 
-<h6>user name</h6>
-<p>{{ userName }}</p>
-<h6>password</h6>
-<p>{{ password }}</p>
+<h6 class="text-start mb-0">User Name: 
+  <span class="binded-text">{{ userName }}</span></h6><br />
+<h6 class="text-start mb-0">Password: 
+  <span class="binded-text">{{password}}</span></h6>
 <br />
 
-<!-- exercise -->
-<!-- must need to import form module -->
-<button class="btn btn-dark" (click)="viewExercise()">view exercise</button
+<!-- EXERCISE -->
+<!-- MUST NEED TO IMPORT FORM MODULE IN TO APP MODULE -->
+<button class="btn btn-dark" (click)="viewExercise()">View Exercise</button
 ><br /><br />
 
 <div [style.display]="bool ? '' : 'none'">
-  <input
-    type="text"
-    placeholder="post titel"
-    [(ngModel)]="postTitel"
-  /><br /><br />
-  <textarea
-    placeholder="Post Details"
-    [(ngModel)]="postDetails"
-    cols="23"
-  ></textarea
-  ><br /><br />
-  <input
-    type="text"
-    placeholder="post image url"
-    [(ngModel)]="postImage"
-  /><br /><br />
-  <input type="text" placeholder="post url" [(ngModel)]="postURL" /><br /><br />
-  <input type="checkbox" [(ngModel)]="check" (click)="checkBox()" />Add
-  Background<br /><br /><br />
+  <input type="text" placeholder="post titel" [(ngModel)]="postTitel" class="form-control" /><br />
+  <textarea placeholder="post details" [(ngModel)]="postDetails" cols="23" class="form-control" ></textarea><br />
+  <input type="text" placeholder="post image url - ./assets/property-binding.jpg" [(ngModel)]="postImage" class="form-control" /><br />
+  <input type="text" placeholder="post url - look at bottom" [(ngModel)]="postURL" class="form-control" /><br />
+  <input type="checkbox" [(ngModel)]="check" (click)="checkBox()" class="form-check-input"/>&nbsp;&nbsp;Add Background<br /><br />
 
-  <h6>post titel</h6>
-  <p>{{ postTitel }}</p>
-  <h6>post details</h6>
-  <p>{{ postDetails }}</p>
-  <img [src]="postImage" alt="" width="150" /><br /><br />
-  <a [href]="postURL" [class.edit-url]="check" class="mb-3">{{ postURL }}</a>
+  <h6 class="text-start mb-0">Post Titel: 
+    <span class="binded-text">{{ postTitel }}</span></h6><br />
+  <h6 class="text-start mb-0">Post Details: 
+    <span class="binded-text">{{ postDetails }}</span></h6><br />
+  <img [src]="postImage" alt="" width="150" /><br />
+  <a [href]="postURL" [class.edit-url]="check" class="pb-3">{{ postURL }}</a>
 </div>
