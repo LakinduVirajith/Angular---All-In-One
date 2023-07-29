@@ -1,0 +1,17 @@
+<h4>Host Binding Examples</h4><br />
+
+<div class="row">
+    <div class="col-6">
+        <div class="border"><h6>Example 1</h6></div>
+        <div class="border"><h6>Example 2</h6></div>
+    </div>
+    <div class="col-6">
+        <div class="border" [appHostBinding1]="isHighlighted">
+            <button class="btn btn-dark" (click)="backgroundHighlight()">Toggle Highlight</button>
+        </div>
+        <div class="border">
+            <button class="btn btn-dark" appHostBinding2>Click or Doubleclick me to trigger</button>
+        </div>        
+    </div>
+</div>
+

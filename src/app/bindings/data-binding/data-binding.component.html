@@ -1,0 +1,45 @@
+<h4>Data Binding Examples</h4><br />
+
+<div class="row">
+  <div class="col-6">
+    <!-- STRING INTERPOLATION  -->
+    <h5>String Interpolation</h5>
+    <div class="border">
+      <p>{{ message }}</p>
+    </div>
+  
+    <!-- PROPERTY BINDING -->
+    <h5>Property Binding</h5>
+    <div class="border">
+      <img [src]="imgUrl" alt="imgUrl" width="100" />
+    </div>
+    <div class="border">
+      <button class="btn btn-dark" [disabled]="isDisabled">Click Me</button>
+    </div>
+  </div>
+  
+  <div class="col-6">
+    <!-- CLASS BINDING -->
+    <h5>Class Binding</h5>
+    <div class="border">
+      <button class="btn btn-dark mb-2" (click)="classBinding()">click me</button>
+      <h6 [class.text-red]="bool">class binding</h6>
+    </div>
+  
+    <!-- STYLE BINDING -->
+    <h5>Style Binding</h5>
+    <div class="border">
+      <button class="btn btn-dark mb-2" (click)="styleBinding()">click me</button>
+      <h6 [style.color]="boolClass ? 'rgb(190, 84, 44)' : 'rgb(0, 132, 194)'">
+        style binding
+      </h6>
+    </div>
+  
+    <!-- TEMPLATE VARIABLE -->
+    <h5>Template Variable</h5>
+    <div class="border">
+      <input type="text" class="form-control mb-2" #username (keyup.enter)="onKeyup(username.value)" placeholder="type and press enter" />
+      <h6 class="pt-1">{{ variable }}</h6>
+    </div>
+  </div>
+</div>

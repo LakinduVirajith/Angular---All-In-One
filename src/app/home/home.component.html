@@ -3,58 +3,60 @@
 
 <div class="main">
   <div class="page" *ngIf="option === 0">
-    <button class="btn btn-dark" (click)="onClick(1)">Decorator</button>
-    <button class="btn btn-dark" (click)="onClick(2)">Binding</button>
-    <button class="btn btn-dark" (click)="onClick(3)">Directive</button>
+    <button class="btn btn-dark" (click)="onClick(1)">Decorators</button>
+    <button class="btn btn-dark" (click)="onClick(2)">Bindings</button>
+    <button class="btn btn-dark" (click)="onClick(3)">Directives</button>
+    <button class="btn btn-dark" [routerLink]="['/pipes']">Pipes</button>
+    <button class="btn btn-dark" (click)="onClick(4)" >Forms</button>
+    <button class="btn btn-dark" [routerLink]="['/calculator-service']">Services</button>
+    <button class="btn btn-dark" [routerLink]="['/']">Auth Guard</button>
+    <button class="btn btn-dark" [routerLink]="['/']">Observable</button>
   </div>
 
   <div [ngSwitch]="option">
+    <!-- DECORATORS -->
     <div *ngSwitchCase="1" class="sub">
-      <button class="btn btn-dark" routerLink="/input-decorator">
-        Input Decorator
-      </button>
-      <button class="btn btn-dark" routerLink="/output-decorator">
-        Output & Event Emitter Decorator</button
-      ><br />
+      <button class="btn btn-dark" routerLink="/input-decorator">Input Decorator</button>
+      <button class="btn btn-dark" routerLink="/output-decorator">Output & Event Emitter Decorator</button>
+      <button class="btn btn-dark" routerLink="/view-child-decorator">View Child Decorator</button>
+      <button class="btn btn-dark" routerLink="/host-listener-decorator">Host Listener Decorator</button>
+      <button class="btn btn-dark" routerLink="/host-binding-decorator">Host Binding Decorator</button>
+      <br />
       <button class="btn btn-dark" (click)="onClick(0)">Go Back</button>
     </div>
 
+    <!-- BINDINGS -->
     <div *ngSwitchCase="2" class="sub">
       <h6>One-Way Binding</h6>
-      <button class="btn btn-dark" routerLink="/data-binding">
-        Data Binding
-      </button>
-      <button class="btn btn-dark" routerLink="/event-binding">
-        Event Binding
-      </button>
+      <button class="btn btn-dark" routerLink="/data-binding">Data Binding</button>
+      <button class="btn btn-dark" routerLink="/event-binding">Event Binding</button>
       <h6>Two-Way Binding</h6>
-      <button class="btn btn-dark" routerLink="/two-way-binding">
-        Two-Way Binding</button
-      ><br />
+      <button class="btn btn-dark" routerLink="/two-way-binding">Two-Way Binding</button>
+      <br />
       <button class="btn btn-dark" (click)="onClick(0)">Go Back</button>
     </div>
 
+    <!-- DIRECTIVES -->
     <div *ngSwitchCase="3" class="sub">
       <h6>Structural Directive</h6>
-      <button class="btn btn-dark" routerLink="/ng-for-directive">
-        NgFor Directive
-      </button>
-      <button class="btn btn-dark" routerLink="/change-detection">
-        Change Detection
-      </button>
-      <button class="btn btn-dark" routerLink="/ng-if-directive">
-        NgIf Directive
-      </button>
-      <button class="btn btn-dark" routerLink="/ng-switch-case-directive">
-        NgSwitchCase Directive
-      </button>
+      <button class="btn btn-dark" routerLink="/ng-for-directive">NgFor Directive</button>
+      <button class="btn btn-dark" routerLink="/ng-if-directive">NgIf Directive</button>
+      <button class="btn btn-dark" routerLink="/ng-switch-case-directive">NgSwitchCase Directive</button>
       <h6>Attribute Directive</h6>
-      <button class="btn btn-dark" routerLink="/ng-style-directive">
-        NgStyle Directive
-      </button>
-      <button class="btn btn-dark" routerLink="/ng-class-directive">
-        NgClass Directive
-      </button>
+      <button class="btn btn-dark" routerLink="/ng-style-directive">NgStyle Directive</button>
+      <button class="btn btn-dark" routerLink="/ng-class-directive">NgClass Directive</button>
+      <h6>Custom Directive</h6>
+      <button class="btn btn-dark" routerLink="/custom-directive">Custom Directive</button>
+      <br />
+      <button class="btn btn-dark" (click)="onClick(0)">Go Back</button>
+    </div>
+
+    <!-- FORMS -->
+    <div *ngSwitchCase="4" class="sub">
+      <button class="btn btn-dark" routerLink="/driven-form">Template Driven Form</button>
+      <button class="btn btn-dark" routerLink="/reactive-form">Reactive Form</button>
+      <button class="btn btn-dark" routerLink="/reactive-form-with-form-builder">Form with Form Builder</button>
+      <button class="btn btn-dark" routerLink="/form-with-custom-validations">Form with Custom Validations</button>
       <br />
       <button class="btn btn-dark" (click)="onClick(0)">Go Back</button>
     </div>

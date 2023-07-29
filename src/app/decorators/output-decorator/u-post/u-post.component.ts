@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./u-post.component.scss'],
 })
 export class UPostComponent {
-  /* get child message */
+  /* GET CHILD MESSAGE */
   childMessage!: string;
   getChildMessage(event: any) {
     console.log(event);

@@ -1,0 +1,16 @@
+<h4>Custom Directive Example</h4><br />
+
+<h5>Example 1</h5><br />
+
+<div class="form-group">
+    <label class="d-flex mb-1">Email</label>
+    <input class="form-control mb-2" appValidation [validationType]="'email'" type="email" placeholder="alicejohnson@gmail.com" maxlength="40" />
+</div>
+<div class="form-group">
+    <label class="d-flex mb-1">Password</label>
+    <input class="form-control mb-2" appValidation [validationType]="'minLength'" [minLength]="8" type="password" placeholder="********" />
+</div><br />
+
+<h5>Example 2</h5><br />
+
+<p appHighlight>Hover over me to see the effect!</p>
