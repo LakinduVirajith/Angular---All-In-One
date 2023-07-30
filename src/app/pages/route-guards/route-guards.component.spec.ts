@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TopicRouteGuardsComponent } from './topic-route-guards.component';
+import { TopicRouteGuardsComponent } from './route-guards.component';
 
 describe('TopicRouteGuardsComponent', () => {
   let component: TopicRouteGuardsComponent;

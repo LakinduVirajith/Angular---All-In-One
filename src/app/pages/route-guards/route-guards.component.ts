@@ -3,11 +3,11 @@ import { CommonVariables } from 'src/app/common/CommonVariables';
 import { faCheck, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-topic-route-guards',
-  templateUrl: './topic-route-guards.component.html',
-  styleUrls: ['./topic-route-guards.component.scss']
+  selector: 'app-route-guards',
+  templateUrl: './route-guards.component.html',
+  styleUrls: ['./route-guards.component.scss']
 })
-export class TopicRouteGuardsComponent {
+export class RouteGuardsComponent {
   faCheck = faCheck;
   faXmark = faXmark;
   isAuthenticated: boolean = CommonVariables.isAuthenticated;

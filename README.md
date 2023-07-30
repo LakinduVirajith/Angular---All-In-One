@@ -529,8 +529,6 @@ Change Detection and Zones
 
 Lifecycle Hooks
 
-Route Guards
-
 Angular Universal (Server-side Rendering)
 
 RxJS (Reactive Extensions for JavaScript)

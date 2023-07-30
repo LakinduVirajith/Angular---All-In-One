@@ -28,6 +28,14 @@ input {
   border-width: 1px;
 }
 
+.nav {
+  display: flex;
+  flex-direction: column;
+  row-gap: 18px;
+  margin: auto;
+  width: 100%;
+}
+
 .error-text{
   font-size: 14px;
 }
