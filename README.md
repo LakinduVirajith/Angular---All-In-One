@@ -435,7 +435,9 @@ This guard is used to determine whether a user can deactivate (navigate away fro
 
 #### 4. CanMatch
 
- the canMatch guard was used to control the route matching process, but it is now deprecated in favor of using functional guards with CanMatchFn. With functional guards, you have more flexibility in defining your custom logic for route matching, giving you better control over the navigation flow in your Angular application
+The canMatch guard plays a crucial role in controlling the route matching process, allowing us to navigate to different components based on specific conditions. For instance, when the user tries to access a route with the same path but different components, the canMatch guard evaluates the conditions and determines the appropriate navigation destination.
+
+Example: If the user is a seller, they will be directed to the seller dashboard; if they are an admin, they will be directed to the admin dashboard; otherwise, they will be navigated to the default user home component.
 
 ---
 

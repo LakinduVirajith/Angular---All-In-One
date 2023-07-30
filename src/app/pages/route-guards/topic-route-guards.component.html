@@ -12,7 +12,13 @@
     </div>
     <button class="btn btn-dark" routerLink="/can-activate-child">Can Activate Child</button>
     <button class="btn btn-dark" routerLink="/can-deactivate">Can Deactivate</button>
-    <button class="btn btn-dark" routerLink="/can-match">Can Match</button>
+    <div class="d-flex">
+        <button class="btn btn-dark w-100" routerLink="/can-match">Can Match</button>&nbsp;&nbsp;
+        <button class="btn btn-danger" (click)="setType('A')" [class.active]="userType == 'admin'">A</button>&nbsp;&nbsp;
+        <button class="btn btn-danger" (click)="setType('S')" [class.active]="userType == 'seller'">S</button>&nbsp;&nbsp;
+        <button class="btn btn-danger" (click)="setType('U')" [class.active]="userType == 'user'">U</button>
+    </div>
+    
     <br />
     <button class="btn btn-dark" [routerLink]="['/home']">Go Back</button>
 </div>

@@ -12,8 +12,19 @@ export class TopicRouteGuardsComponent {
   faXmark = faXmark;
   isAuthenticated: boolean = CommonVariables.isAuthenticated;
 
+  userType: string = CommonVariables.userType;
+
   setAuth(){
     this.isAuthenticated = !this.isAuthenticated ;
     CommonVariables.isAuthenticated = !CommonVariables.isAuthenticated;
+  }
+
+  setType(type: string){
+    if(type == 'A') CommonVariables.userType = 'admin'
+    else if(type == 'S') CommonVariables.userType = 'seller'
+    else if(type == 'U') CommonVariables.userType = 'user'
+    else CommonVariables.userType = 'user'
+
+    this.userType = CommonVariables.userType;
   }
 }
