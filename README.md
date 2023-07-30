@@ -433,11 +433,9 @@ Similar to CanActivate, but specifically applies to child routes. It checks if a
 
 This guard is used to determine whether a user can deactivate (navigate away from) a specific route. It is commonly used for confirmation prompts, asking users to confirm their decision before leaving the page.
 
-#### 4. CanLoad
+#### 4. CanMatch
 
-This guard is used in lazy-loaded modules. It determines whether a user is allowed to load a specific module. It can be used to restrict access to modules based on user permissions or other conditions.
-
-#### 5. CanMatch
+ the canMatch guard was used to control the route matching process, but it is now deprecated in favor of using functional guards with CanMatchFn. With functional guards, you have more flexibility in defining your custom logic for route matching, giving you better control over the navigation flow in your Angular application
 
 ---
 

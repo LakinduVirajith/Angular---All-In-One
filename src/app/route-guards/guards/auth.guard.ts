@@ -5,7 +5,8 @@ export const authGuard: CanActivateFn = (route, state) => {
 
   if (CommonVariables.isAuthenticated) {
     return true;
-  } else {    
+  } else {
+    window.alert('Access Denied!');
     return false;
   }
 };

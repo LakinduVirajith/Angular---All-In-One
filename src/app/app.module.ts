@@ -58,6 +58,9 @@ import { TopicRouteGuardsComponent } from './pages/route-guards/topic-route-guar
 import { CanActivateComponent } from './route-guards/can-activate/can-activate.component';
 import { CanActivateChildComponent } from './route-guards/can-activate-child/can-activate-child.component';
 import { CanDeactivateComponent } from './route-guards/can-deactivate/can-deactivate.component';
+import { UserHomeComponent } from './route-guards/can-match/user-home/user-home.component';
+import { AdminDashboardComponent } from './route-guards/can-match/admin-dashboard/admin-dashboard.component';
+import { SellerDashboardComponent } from './route-guards/can-match/seller-dashboard/seller-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -114,6 +117,9 @@ import { CanDeactivateComponent } from './route-guards/can-deactivate/can-deacti
     CanActivateChildComponent, 
     CanActivateComponent,
     CanDeactivateComponent,
+    UserHomeComponent,
+    AdminDashboardComponent,
+    SellerDashboardComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, NgbModule, FontAwesomeModule],
   providers: [],

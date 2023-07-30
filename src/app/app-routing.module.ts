@@ -33,6 +33,10 @@ import { CanActivateComponent } from './route-guards/can-activate/can-activate.c
 import { CanDeactivateComponent } from './route-guards/can-deactivate/can-deactivate.component';
 import { authGuard } from './route-guards/guards/auth.guard';
 import { CanActivateChildComponent } from './route-guards/can-activate-child/can-activate-child.component';
+import { workStatusGuard } from './route-guards/guards/work-status.guard';
+import { UserHomeComponent } from './route-guards/can-match/user-home/user-home.component';
+import { SellerDashboardComponent } from './route-guards/can-match/seller-dashboard/seller-dashboard.component';
+import { AdminDashboardComponent } from './route-guards/can-match/admin-dashboard/admin-dashboard.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -67,7 +71,10 @@ const routes: Routes = [
   { path: 'route-guards' , component: TopicRouteGuardsComponent },
   { path: 'can-activate', component: CanActivateComponent, canActivate: [authGuard]},
   { path: 'can-activate-child', component: CanActivateChildComponent},
-  { path: 'can-deactivate', component: CanDeactivateComponent},
+  { path: 'can-deactivate', component: CanDeactivateComponent, canDeactivate: [workStatusGuard]},
+  { path: 'can-match', component: UserHomeComponent},
+  { path: 'can-match', component: SellerDashboardComponent},
+  { path: 'can-match', component: AdminDashboardComponent},
 ];
 
 @NgModule({
