@@ -32,6 +32,7 @@ import { TopicRouteGuardsComponent } from './pages/route-guards/topic-route-guar
 import { CanActivateComponent } from './route-guards/can-activate/can-activate.component';
 import { CanDeactivateComponent } from './route-guards/can-deactivate/can-deactivate.component';
 import { authGuard } from './route-guards/guards/auth.guard';
+import { CanActivateChildComponent } from './route-guards/can-activate-child/can-activate-child.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -65,6 +66,7 @@ const routes: Routes = [
 
   { path: 'route-guards' , component: TopicRouteGuardsComponent },
   { path: 'can-activate', component: CanActivateComponent, canActivate: [authGuard]},
+  { path: 'can-activate-child', component: CanActivateChildComponent},
   { path: 'can-deactivate', component: CanDeactivateComponent},
 ];
 

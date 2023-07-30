@@ -54,9 +54,10 @@ import { FormWithCustomValidationsComponent } from './forms/form-with-custom-val
 
 import { CalculatorComponent } from './services/calculator/calculator.component';
 
-import { CanActivateComponent } from './route-guards/can-activate/can-activate.component';
-import { CanDeactivateComponent } from './route-guards/can-deactivate/can-deactivate.component';
 import { TopicRouteGuardsComponent } from './pages/route-guards/topic-route-guards.component';
+import { CanActivateComponent } from './route-guards/can-activate/can-activate.component';
+import { CanActivateChildComponent } from './route-guards/can-activate-child/can-activate-child.component';
+import { CanDeactivateComponent } from './route-guards/can-deactivate/can-deactivate.component';
 
 @NgModule({
   declarations: [
@@ -109,9 +110,10 @@ import { TopicRouteGuardsComponent } from './pages/route-guards/topic-route-guar
     
     CalculatorComponent,
           
+    TopicRouteGuardsComponent,
+    CanActivateChildComponent, 
     CanActivateComponent,
     CanDeactivateComponent,
-    TopicRouteGuardsComponent, 
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, NgbModule, FontAwesomeModule],
   providers: [],
