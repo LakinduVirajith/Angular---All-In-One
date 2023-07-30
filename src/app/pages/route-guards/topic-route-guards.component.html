@@ -1,0 +1,20 @@
+<h3>Angular Route Guards</h3>
+<br />
+
+<!-- ROUTE GUARDS NAV -->
+<div class="nav">
+    <div class="d-flex">
+        <button class="btn btn-dark w-100" routerLink="/can-activate">Can Activate</button>&nbsp;&nbsp;
+        <button class="btn btn-dark" [style.backgroundColor]="isAuthenticated ? '#38c96a' : '#c93838'" (click)="setAuth()">
+            <fa-icon *ngIf="isAuthenticated" [icon]="faCheck" ></fa-icon>
+            <fa-icon *ngIf="!isAuthenticated" [icon]="faXmark" ></fa-icon>
+        </button>
+    </div>
+    
+    <button class="btn btn-dark" routerLink="/">Can Activate Child</button>
+    <button class="btn btn-dark" routerLink="/can-deactivate">Can Deactivate</button>
+    <button class="btn btn-dark" routerLink="/">Can Load</button>
+    <button class="btn btn-dark" routerLink="/">Can Match</button>
+    <br />
+    <button class="btn btn-dark" [routerLink]="['/home']">Go Back</button>
+</div>

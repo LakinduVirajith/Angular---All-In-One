@@ -5,7 +5,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { HomeComponent } from './home/home.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HomeComponent } from './pages/home/home.component';
 
 import { IPostComponent } from './decorators/input-decorator/i-post/i-post.component';
 import { IPostListComponent } from './decorators/input-decorator/i-post-list/i-post-list.component';
@@ -52,8 +53,10 @@ import { ReactiveFormWithFormBuilderComponent } from './forms/reactive-form-with
 import { FormWithCustomValidationsComponent } from './forms/form-with-custom-validations/form-with-custom-validations.component';
 
 import { CalculatorComponent } from './services/calculator/calculator.component';
+
 import { CanActivateComponent } from './route-guards/can-activate/can-activate.component';
 import { CanDeactivateComponent } from './route-guards/can-deactivate/can-deactivate.component';
+import { TopicRouteGuardsComponent } from './pages/route-guards/topic-route-guards.component';
 
 @NgModule({
   declarations: [
@@ -107,9 +110,10 @@ import { CanDeactivateComponent } from './route-guards/can-deactivate/can-deacti
     CalculatorComponent,
           
     CanActivateComponent,
-    CanDeactivateComponent, 
+    CanDeactivateComponent,
+    TopicRouteGuardsComponent, 
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, NgbModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, NgbModule, FontAwesomeModule],
   providers: [],
   bootstrap: [AppComponent],
 })

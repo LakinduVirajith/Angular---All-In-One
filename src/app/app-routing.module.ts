@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './pages/home/home.component';
 
 import { IPostComponent } from './decorators/input-decorator/i-post/i-post.component';
 import { UPostComponent } from './decorators/output-decorator/u-post/u-post.component';
@@ -27,8 +27,11 @@ import { ReactiveFormWithFormBuilderComponent } from './forms/reactive-form-with
 import { FormWithCustomValidationsComponent } from './forms/form-with-custom-validations/form-with-custom-validations.component';
 
 import { CalculatorComponent } from './services/calculator/calculator.component';
+
+import { TopicRouteGuardsComponent } from './pages/route-guards/topic-route-guards.component';
 import { CanActivateComponent } from './route-guards/can-activate/can-activate.component';
 import { CanDeactivateComponent } from './route-guards/can-deactivate/can-deactivate.component';
+import { authGuard } from './route-guards/guards/auth.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -60,7 +63,8 @@ const routes: Routes = [
 
   { path: 'calculator-service', component: CalculatorComponent},
 
-  { path: 'can-activate', component: CanActivateComponent},
+  { path: 'route-guards' , component: TopicRouteGuardsComponent },
+  { path: 'can-activate', component: CanActivateComponent, canActivate: [authGuard]},
   { path: 'can-deactivate', component: CanDeactivateComponent},
 ];
 
