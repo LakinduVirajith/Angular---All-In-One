@@ -27,6 +27,8 @@ import { ReactiveFormWithFormBuilderComponent } from './forms/reactive-form-with
 import { FormWithCustomValidationsComponent } from './forms/form-with-custom-validations/form-with-custom-validations.component';
 
 import { CalculatorComponent } from './services/calculator/calculator.component';
+import { CanActivateComponent } from './route-guards/can-activate/can-activate.component';
+import { CanDeactivateComponent } from './route-guards/can-deactivate/can-deactivate.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -56,7 +58,10 @@ const routes: Routes = [
   { path: 'reactive-form-with-form-builder', component: ReactiveFormWithFormBuilderComponent },
   { path: 'form-with-custom-validations', component: FormWithCustomValidationsComponent },
 
-  { path: 'calculator-service', component: CalculatorComponent}
+  { path: 'calculator-service', component: CalculatorComponent},
+
+  { path: 'can-activate', component: CanActivateComponent},
+  { path: 'can-deactivate', component: CanDeactivateComponent},
 ];
 
 @NgModule({

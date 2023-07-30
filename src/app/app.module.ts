@@ -52,6 +52,8 @@ import { ReactiveFormWithFormBuilderComponent } from './forms/reactive-form-with
 import { FormWithCustomValidationsComponent } from './forms/form-with-custom-validations/form-with-custom-validations.component';
 
 import { CalculatorComponent } from './services/calculator/calculator.component';
+import { CanActivateComponent } from './route-guards/can-activate/can-activate.component';
+import { CanDeactivateComponent } from './route-guards/can-deactivate/can-deactivate.component';
 
 @NgModule({
   declarations: [
@@ -102,7 +104,10 @@ import { CalculatorComponent } from './services/calculator/calculator.component'
     ReactiveFormWithFormBuilderComponent,
     FormWithCustomValidationsComponent,
     
-    CalculatorComponent, 
+    CalculatorComponent,
+          
+    CanActivateComponent,
+    CanDeactivateComponent, 
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, NgbModule],
   providers: [],

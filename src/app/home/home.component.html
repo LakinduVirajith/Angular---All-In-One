@@ -9,7 +9,7 @@
     <button class="btn btn-dark" [routerLink]="['/pipes']">Pipes</button>
     <button class="btn btn-dark" (click)="onClick(4)" >Forms</button>
     <button class="btn btn-dark" [routerLink]="['/calculator-service']">Services</button>
-    <button class="btn btn-dark" [routerLink]="['/']">Auth Guard</button>
+    <button class="btn btn-dark" (click)="onClick(5)">Route Guards</button>
     <button class="btn btn-dark" [routerLink]="['/']">Observable</button>
   </div>
 
@@ -60,5 +60,17 @@
       <br />
       <button class="btn btn-dark" (click)="onClick(0)">Go Back</button>
     </div>
+
+    <!-- ROUTE GUARDS -->
+    <div *ngSwitchCase="5" class="sub">
+      <button class="btn btn-dark" routerLink="/can-activate">Can Activate</button>
+      <button class="btn btn-dark" routerLink="/">Can Activate Child</button>
+      <button class="btn btn-dark" routerLink="/can-deactivate">Can Deactivate</button>
+      <button class="btn btn-dark" routerLink="/">Can Load</button>
+      <button class="btn btn-dark" routerLink="/">Can Match</button>
+      <br />
+      <button class="btn btn-dark" (click)="onClick(0)">Go Back</button>
+    </div>
+
   </div>
 </div>
