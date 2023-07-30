@@ -419,7 +419,27 @@ Dependency Injection is a design pattern used in Angular to provide instances of
 
 ## Route Guards
 
-<br/><br/>
+Angular Route Guards are a powerful feature that allows you to control navigation and access to routes in an Angular application. Route Guards are used to protect certain routes based on specific conditions, such as user authentication, authorization, or data loading.
+
+#### 1. CanActivate
+
+This guard determines whether a user is allowed to activate (navigate to) a particular route. It is commonly used to protect routes that require authentication. If the user is not authenticated, the guard can redirect them to a login page or block access altogether.
+
+#### 2. CanActivateChild
+
+Similar to CanActivate, but specifically applies to child routes. It checks if a user is allowed to activate a child route within a parent route.
+
+#### 3. CanDeactivate
+
+This guard is used to determine whether a user can deactivate (navigate away from) a specific route. It is commonly used for confirmation prompts, asking users to confirm their decision before leaving the page.
+
+#### 4. CanMatch
+
+The canMatch guard plays a crucial role in controlling the route matching process, allowing us to navigate to different components based on specific conditions. For instance, when the user tries to access a route with the same path but different components, the canMatch guard evaluates the conditions and determines the appropriate navigation destination.
+
+Example: If the user is a seller, they will be directed to the seller dashboard; if they are an admin, they will be directed to the admin dashboard; otherwise, they will be navigated to the default user home component.
+
+---
 
 # ANGULAR CLI AND PROJECT SETUP
 
@@ -429,9 +449,21 @@ Angular CLI (Command Line Interface) is a powerful tool provided by the Angular 
 
 npm install -g @angular/cli
 
+## Angular CLI Version
+
+ng version
+
 ## Install Project
 
 ng new `your-project-name`
+
+## Update Project To Latest Version
+
+ng update
+
+ng update @angular/cli
+
+ng update @angular/core
 
 ## Development Server
 
@@ -473,6 +505,14 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
+# PROJECT DEPENDENCIES
+
+primeng
+
+ng-bootstrap
+
+fortawesome
+
 # Feature needed functions
 
 HTTP Client and API Communication
@@ -488,8 +528,6 @@ Angular Compiler and AOT (Ahead-of-Time) Compilation
 Change Detection and Zones
 
 Lifecycle Hooks
-
-Route Guards
 
 Angular Universal (Server-side Rendering)
 
@@ -528,3 +566,23 @@ Angular Deployment and Hosting
 Angular Testing (Unit Testing, Integration Testing, and End-to-end Testing)
 
 Angular Internationalization (i18n)
+
+---
+
+Reverse Proxy
+
+SSL/TLS
+
+Authentication and Authorization
+
+Cross-Site Request Forgery (CSRF) Protection
+
+Content Security Policy (CSP)
+
+HTTP Security Headers
+
+Cookies
+
+Cache Handling
+
+Local Storage and Session Storage

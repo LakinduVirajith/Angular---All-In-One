@@ -1,0 +1,10 @@
+.main{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100vh;
+  row-gap: 24px;
+
+  button{
+    width: 200px;
+  }
+}

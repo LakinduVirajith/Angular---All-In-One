@@ -1,0 +1,21 @@
+<div class="can-deactivate margin">
+    <h6>
+        If you have unsaved changes in your to-do list, the CanDeactivate route guard will activate to ask if you want to leave the page.
+    </h6>
+</div>
+
+<h5 class="text-start margin">Add To-Do</h5>
+<div class="margin">
+    <input class="w-100" type="text" class="form-control" placeholder="I Have to Do..." [(ngModel)]="toDo" (ngModelChange)="isTypeDoEdit()" (keyup.enter)="saveToDo()"/>
+</div>
+
+<h5 class="text-start margin">Your To-Do List</h5>
+<p *ngIf="toDoList.length == 0" class="border margin">no data to show</p>
+<div class="margin">
+    <div *ngFor="let toDo of toDoList; let i = index;" class="d-flex">
+        <h6 class="border">#{{i+1}}</h6>
+        <h6 class="border w-100">{{toDo}}</h6>
+        <button class="btn btn-danger border" (click)="removeToDo(i)">remove</button>
+    </div>
+</div>
+
