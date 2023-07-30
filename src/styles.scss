@@ -1,5 +1,9 @@
-/* Importing Bootstrap SCSS file. */
+/* IMPORTING BOOTSTRAP SCSS FILE. */
 @import 'bootstrap/scss/bootstrap';
+
+/* IMPORTING PRIMENG CSS FILE. */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
 
 body {
   margin-top: 1rem;
@@ -22,6 +26,14 @@ input {
   padding-bottom: 4px;
   border-radius: 2px;
   border-width: 1px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  row-gap: 18px;
+  margin: auto;
+  width: 100%;
 }
 
 .error-text{

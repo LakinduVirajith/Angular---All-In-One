@@ -1,0 +1,21 @@
+.margin{
+    margin: 12px 20%;
+    margin-bottom: 24px !important;
+}
+
+.can-deactivate{
+    background-color: #404040;
+    color: white;
+    font-weight: 500;
+    border-radius: 12px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.200);
+
+    h6{
+        padding: 24px 36px;
+        line-height: 135%;
+    }
+}
+
+h6{
+    font-weight: 400;
+}

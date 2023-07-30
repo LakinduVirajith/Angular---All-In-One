@@ -5,8 +5,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { HomeComponent } from './home/home.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HomeComponent } from './pages/home/home.component';
 
+import { DecoratorsComponent } from './pages/decorators/decorators.component';
 import { IPostComponent } from './decorators/input-decorator/i-post/i-post.component';
 import { IPostListComponent } from './decorators/input-decorator/i-post-list/i-post-list.component';
 import { UPostComponent } from './decorators/output-decorator/u-post/u-post.component';
@@ -29,10 +31,12 @@ import { ResizedListenerDirective } from './decorators/host-listener/listeners/r
 import { HostBinding1Directive } from './decorators/host-binding/bindings/host-binding-1.directive';
 import { HostBinding2Directive } from './decorators/host-binding/bindings/host-binding-2.directive';
 
+import { BindingsComponent } from './pages/bindings/bindings.component';
 import { DataBindingComponent } from './bindings/data-binding/data-binding.component';
 import { EventBindingComponent } from './bindings/event-binding/event-binding.component';
 import { TwoWayBindingComponent } from './bindings/two-way-binding/two-way-binding.component';
 
+import { DirectivesComponent } from './pages/directives/directives.component';
 import { NgForComponent } from './directives/ng-for/ng-for.component';
 import { NgIfComponent } from './directives/ng-if/ng-if.component';
 import { NgSwitchCaseComponent } from './directives/ng-switch-case/ng-switch-case.component';
@@ -46,6 +50,7 @@ import { PipesComponent } from './pipes/pipes.component';
 import { AppendPipe } from './pipes/append/append.pipe';
 import { SummaryPipe } from './pipes/summary/summary.pipe';
 
+import { FormsComponent } from './pages/forms/forms.component';
 import { DrivenFormComponent } from './forms/driven-form/driven-form.component';
 import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.component';
 import { ReactiveFormWithFormBuilderComponent } from './forms/reactive-form-with-form-builder/reactive-form-with-form-builder.component';
@@ -53,11 +58,20 @@ import { FormWithCustomValidationsComponent } from './forms/form-with-custom-val
 
 import { CalculatorComponent } from './services/calculator/calculator.component';
 
+import { RouteGuardsComponent } from './pages/route-guards/route-guards.component';
+import { CanActivateComponent } from './route-guards/can-activate/can-activate.component';
+import { CanActivateChildComponent } from './route-guards/can-activate-child/can-activate-child.component';
+import { CanDeactivateComponent } from './route-guards/can-deactivate/can-deactivate.component';
+import { UserHomeComponent } from './route-guards/can-match/user-home/user-home.component';
+import { AdminDashboardComponent } from './route-guards/can-match/admin-dashboard/admin-dashboard.component';
+import { SellerDashboardComponent } from './route-guards/can-match/seller-dashboard/seller-dashboard.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
 
+    DecoratorsComponent,
     IPostComponent,
     IPostListComponent,
     UPostComponent,
@@ -67,6 +81,7 @@ import { CalculatorComponent } from './services/calculator/calculator.component'
     HostListenerComponent,
     HostBindingComponent,
 
+    DirectivesComponent,
     ClickListenerDirective,
     DoubleClickListenerDirective,
     MouseenterListenerDirective,
@@ -80,6 +95,7 @@ import { CalculatorComponent } from './services/calculator/calculator.component'
     HostBinding1Directive,
     HostBinding2Directive,  
 
+    BindingsComponent,
     DataBindingComponent,
     EventBindingComponent,
     TwoWayBindingComponent,
@@ -97,14 +113,23 @@ import { CalculatorComponent } from './services/calculator/calculator.component'
     AppendPipe,
     SummaryPipe,
 
+    FormsComponent,
     DrivenFormComponent,
     ReactiveFormComponent,
     ReactiveFormWithFormBuilderComponent,
     FormWithCustomValidationsComponent,
     
-    CalculatorComponent, 
+    CalculatorComponent,
+          
+    RouteGuardsComponent,
+    CanActivateChildComponent, 
+    CanActivateComponent,
+    CanDeactivateComponent,
+    UserHomeComponent,
+    AdminDashboardComponent,
+    SellerDashboardComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, NgbModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, NgbModule, FontAwesomeModule],
   providers: [],
   bootstrap: [AppComponent],
 })
