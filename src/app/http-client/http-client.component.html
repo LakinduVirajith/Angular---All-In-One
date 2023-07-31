@@ -1,0 +1,13 @@
+<h4>HTTP Client Example</h4><br />
+
+<div class="d-flex flex-column justify-center text-start mx-5 px-5">
+    <h6 class="border">The HttpClient module in Angular is a powerful tool for making HTTP requests from your Angular application to backend servers or external APIs. It is part of the @angular/common/http package and provides a simple and consistent API for working with HTTP requests and responses.</h6>
+
+    <br /><h4 class="text-center">To Learn More About How It Works, Take A Look At These Two Files</h4><br />
+        
+    <p class="border">http.service.ts: This file contains a service called HTTPService, which is responsible for making HTTP requests to the server or external APIs. It has methods like getAllData(), getData(), postData(), putData(), and deleteData() to perform different types of HTTP operations like GET, POST, PUT, and DELETE.</p>
+        
+    <p class="border">http-client.component.ts: This file contains a component called HttpClientComponent. In this component, we use the HTTPService to fetch data from the server and display it on the web page. The component has a method fetchPostData() to get all the products using the getAllData() method of the HTTPService. It also handles the response and errors using the subscribe() method from RxJS.</p>
+
+    <p class="border text-danger">Make sure to import HttpClientModule in the AppModule to enable HTTP client functionalities throughout the application.</p>
+</div>

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -75,6 +76,8 @@ import { SessionStorageComponent } from './storages/session-storage/session-stor
 import { CookiesComponent } from './storages/cookies/cookies.component';
 import { IndexedDbComponent } from './storages/indexed-db/indexed-db.component';
 
+import { HttpClientComponent } from './http-client/http-client.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -146,8 +149,10 @@ import { IndexedDbComponent } from './storages/indexed-db/indexed-db.component';
     SessionStorageComponent,
     CookiesComponent,
     IndexedDbComponent,
+
+    HttpClientComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, NgbModule, FontAwesomeModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, NgbModule, FontAwesomeModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
