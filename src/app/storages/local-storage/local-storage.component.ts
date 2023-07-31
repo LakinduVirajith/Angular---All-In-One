@@ -39,14 +39,14 @@ export class LocalStorageComponent {
 
     if(value) {
       localStorage.removeItem(this.removeKey);
-      window.alert(`Successfully removed value by key: ${this.removeKey}`);
+      window.alert(`successfully removed value by key: ${this.removeKey}`);
       this.removeKey = '';
     }
     else if(this.removeKey){
-      window.alert(`Key value ${this.removeKey} does not exist in LocalStorage.`);
+      window.alert(`key value ${this.removeKey} does not exist in local-storage.`);
     }
     else{
-      window.alert(`Please enter key value input`);
+      window.alert(`please enter key value input`);
     }
   }
   
@@ -55,14 +55,15 @@ export class LocalStorageComponent {
     const value = localStorage.getItem(this.updateKey);
 
     if(!this.updateValue){
-      window.alert(`Please enter key value input`);
+      window.alert(`please enter key value input`);
     }else if(value) {
       localStorage.setItem(this.updateKey, this.updateValue);
-      window.alert(`Successfully updated value by key: ${this.updateKey}`);
+      window.alert(`successfully updated value by key: ${this.updateKey}`);
+      
       this.updateKey = '';
       this.updateValue = '';
     }else{
-      window.alert(`Key value ${this.updateKey} does not exist in LocalStorage.`);
+      window.alert(`key value ${this.updateKey} does not exist in local-storage.`);
     }
   }
 }

@@ -39,14 +39,14 @@ export class SessionStorageComponent {
 
     if(value) {
       sessionStorage.removeItem(this.removeToken);
-      window.alert(`Successfully removed value by token: ${this.removeToken}`);
+      window.alert(`successfully removed value by token: ${this.removeToken}`);
       this.removeToken = '';
     }
     else if(this.removeToken){
-      window.alert(`token value ${this.removeToken} does not exist in Session Storage.`);
+      window.alert(`token value ${this.removeToken} does not exist in session storage.`);
     }
     else{
-      window.alert(`Please enter token value input`);
+      window.alert(`please enter token value input`);
     }
   }
 
@@ -55,14 +55,15 @@ export class SessionStorageComponent {
     const value = sessionStorage.getItem(this.updateToken);
 
     if(!this.updateValue){
-      window.alert(`Please enter token value input`);
+      window.alert(`please enter token value input`);
     }else if(value) {
       sessionStorage.setItem(this.updateToken, this.updateValue);
-      window.alert(`Successfully updated value by token: ${this.updateToken}`);
+      window.alert(`successfully updated value by token: ${this.updateToken}`);
+      
       this.updateToken = '';
       this.updateValue = '';
     }else{
-      window.alert(`token value ${this.updateToken} does not exist in Session Storage.`);
+      window.alert(`token value ${this.updateToken} does not exist in session storage.`);
     }
   }
 }

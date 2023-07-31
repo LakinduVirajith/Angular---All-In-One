@@ -48,6 +48,7 @@ import { adminGuard } from './route-guards/guards/admin.guard';
 import { StoragesComponent } from './pages/storage-navs/storages.component';
 import { LocalStorageComponent } from './storages/local-storage/local-storage.component';
 import { SessionStorageComponent } from './storages/session-storage/session-storage.component';
+import { CookiesComponent } from './storages/cookies/cookies.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -95,7 +96,7 @@ const routes: Routes = [
   { path: 'storages', component: StoragesComponent},
   { path: 'local-storage', component: LocalStorageComponent},
   { path: 'session-storage', component: SessionStorageComponent},
-  { path: 'cookies', component: StoragesComponent},
+  { path: 'cookies', component: CookiesComponent},
   { path: 'indexed-db', component: StoragesComponent}
 ];
 

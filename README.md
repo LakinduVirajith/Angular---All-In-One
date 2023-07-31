@@ -474,6 +474,8 @@ Similar to LocalStorage, but the data stored in SessionStorage will be available
  
 Cookies are small pieces of data stored on the user's browser. They have an expiration date and can be used to store data that needs to be sent back to the server with each HTTP request.
 
+To work with cookies in an Angular application, you can use the `ngx-cookie-service` library, which provides a simple and easy way to manage cookies. 
+
 4. IndexedDB
  
 IndexedDB is a more powerful storage mechanism that allows you to store large amounts of structured data locally in the browser. It provides better performance and query capabilities compared to LocalStorage or SessionStorage.
@@ -553,6 +555,8 @@ primeng
 ng-bootstrap
 
 fortawesome
+
+ngx-cookie-service
 
 # Feature needed functions
 
