@@ -49,6 +49,7 @@ import { StoragesComponent } from './pages/storage-navs/storages.component';
 import { LocalStorageComponent } from './storages/local-storage/local-storage.component';
 import { SessionStorageComponent } from './storages/session-storage/session-storage.component';
 import { CookiesComponent } from './storages/cookies/cookies.component';
+import { IndexedDbComponent } from './storages/indexed-db/indexed-db.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -97,7 +98,7 @@ const routes: Routes = [
   { path: 'local-storage', component: LocalStorageComponent},
   { path: 'session-storage', component: SessionStorageComponent},
   { path: 'cookies', component: CookiesComponent},
-  { path: 'indexed-db', component: StoragesComponent}
+  { path: 'indexed-db', component: IndexedDbComponent}
 ];
 
 @NgModule({
