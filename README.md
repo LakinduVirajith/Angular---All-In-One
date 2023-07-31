@@ -511,6 +511,72 @@ To work with cookies in an Angular application, you can use the `ngx-cookie-serv
  
 IndexedDB is a more powerful storage mechanism that allows you to store large amounts of structured data locally in the browser. It provides better performance and query capabilities compared to LocalStorage or SessionStorage.
 
+## HTTP Client and APIs
+
+The HTTP Client is a module in Angular that allows your application to make HTTP requests to communicate with servers, external APIs, or other web services. It provides a way to send HTTP requests and handle the responses in a convenient and structured manner.
+
+`Key features of Angular HTTP Client`
+
+* Makes asynchronous HTTP requests using the HTTP methods like GET, POST, PUT, DELETE, etc.
+
+* Provides support for handling request and response headers, URL parameters, and request bodies.
+Offers options for error handling and response transformation.
+
+* Supports interceptors to modify or inspect HTTP requests and responses globally.
+
+* Returns data in the form of RxJS Observables, allowing easy handling of asynchronous data streams.
+
+APIs (Application Programming Interfaces):
+APIs are a set of rules and protocols that allow different software applications to communicate with each other. They define how different components of software systems should interact and exchange data. APIs enable developers to access specific functionalities and data from other applications or services.
+
+`Types of APIs`
+
+* Web APIs: These are APIs exposed by web servers to interact with web applications over HTTP. They allow data exchange between client and server applications.
+
+* RESTful APIs: Representational State Transfer (REST) APIs use standard HTTP methods to perform CRUD (Create, Read, Update, Delete) operations on resources. They are stateless and easy to use.
+
+* Third-Party APIs: These APIs are provided by external services or platforms, allowing developers to access their features or data. Examples include social media APIs, payment gateway APIs, etc.
+
+* Native APIs: Native APIs are provided by operating systems or programming languages to interact with the hardware and perform low-level tasks.
+
+`HttpParams`
+
+```
+import { HttpParams } from '@angular/common/http';
+
+// Creating an empty HttpParams instance
+let params = new HttpParams();
+
+// Appending parameters
+params = params.append('id', '123');
+params = params.append('name', 'John Doe');
+
+// Overwriting a parameter
+params = params.set('id', '456');
+
+// Removing a parameter
+params = params.delete('name');
+
+// Checking if a parameter exists
+console.log(params.has('id')); // Output: true
+console.log(params.has('name')); // Output: false
+
+// Retrieving parameter values
+console.log(params.get('id')); // Output: '456'
+console.log(params.get('name')); // Output: null
+
+// Retrieving all values for a parameter
+params = params.append('id', '789');
+console.log(params.getAll('id')); // Output: ['456', '789']
+
+// Retrieving all parameter names
+console.log(params.keys()); // Output: ['id']
+
+// Converting HttpParams to a URL-encoded string
+const paramString = params.toString();
+console.log(paramString); // Output: 'id=456&id=789'
+```
+
 ## Observables
 
 ---
@@ -602,8 +668,6 @@ Angular Animations
 Angular Compiler and AOT (Ahead-of-Time) Compilation
 
 Change Detection and Zones
-
-<!-- Lifecycle Hooks -->
 
 Angular Universal (Server-side Rendering)
 
