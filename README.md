@@ -20,6 +20,10 @@
 
 [Route Guards](#route-guards)
 
+[Storage](#storage)
+
+[Observables](#observables)
+
 ## Components
 
 A "component" in the context of Angular is a building block of the user interface (UI). It is a reusable and self-contained piece of code responsible for defining the structure, behavior, and appearance of a part of the user interface. Components allow you to divide your application into smaller, manageable pieces, making it easier to maintain and understand.
@@ -224,6 +228,21 @@ const routes: Routes = [
   { path: 'products', loadChildren: () => import('./products/products.module').then(m => m.ProductsModule) },
   // Other routes...
 ];
+```
+`CLI generate command`
+```
+ng generate module module-name --route route-path --module app-module-name
+```
+
+module-name: Replace this with the name of the lazy-loaded module you want to create.
+
+route-path: Replace this with the route path for the lazy-loaded module. This path will be used in the RouterModule.forChild() method when defining the route for the lazy-loaded module.
+
+app-module-name: Replace this with the name of the root module of your application. This is the module where the lazy-loaded module will be imported.
+
+`Example command`
+```
+ng generate module dashboard --route dashboard --module app
 ```
 
 ## Decorators
@@ -439,6 +458,28 @@ The canMatch guard plays a crucial role in controlling the route matching proces
 
 Example: If the user is a seller, they will be directed to the seller dashboard; if they are an admin, they will be directed to the admin dashboard; otherwise, they will be navigated to the default user home component.
 
+## Storage 
+
+In Angular, you can use various storage mechanisms to store data locally in the user's browser.
+
+1. LocalStorage
+ 
+This is a simple key-value storage that allows you to store data locally in the browser. The data persists even after the browser is closed.
+
+2. SessionStorage
+ 
+Similar to LocalStorage, but the data stored in SessionStorage will be available only for the duration of the browser session. Once the browser is closed, the data is cleared.
+
+3. Cookies
+ 
+Cookies are small pieces of data stored on the user's browser. They have an expiration date and can be used to store data that needs to be sent back to the server with each HTTP request.
+
+4. IndexedDB
+ 
+IndexedDB is a more powerful storage mechanism that allows you to store large amounts of structured data locally in the browser. It provides better performance and query capabilities compared to LocalStorage or SessionStorage.
+
+## Observables
+
 ---
 
 # ANGULAR CLI AND PROJECT SETUP
@@ -515,9 +556,9 @@ fortawesome
 
 # Feature needed functions
 
-HTTP Client and API Communication
+<!-- HTTP Client and API Communication -->
 
-Observables and RxJS
+<!-- Observables and RxJS -->
 
 Angular Material and UI Components
 
@@ -527,7 +568,7 @@ Angular Compiler and AOT (Ahead-of-Time) Compilation
 
 Change Detection and Zones
 
-Lifecycle Hooks
+<!-- Lifecycle Hooks -->
 
 Angular Universal (Server-side Rendering)
 
@@ -581,8 +622,8 @@ Content Security Policy (CSP)
 
 HTTP Security Headers
 
-Cookies
+<!-- Cookies
 
 Cache Handling
 
-Local Storage and Session Storage
+Local Storage and Session Storage -->

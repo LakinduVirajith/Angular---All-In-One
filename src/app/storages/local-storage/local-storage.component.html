@@ -1,0 +1,41 @@
+<h4>Local Storage Example</h4><br />
+
+<!-- SET DATA IN LOCALSTORAGE -->
+<div class="d-flex gap-3">
+    <h6 class="border w-100">Set Storage Value</h6>
+    <button class="btn btn-dark border w-25" (click)="setValueStorage()">SAVE</button>
+</div>
+<div class="d-flex gap-3 mx-3">
+    <input type="text" class="form-control" placeholder="key" [(ngModel)]="setKey">
+    <input type="text" class="form-control" placeholder="value" [(ngModel)]="setValue">
+</div><br />
+
+<!-- GET DATA FROM LOCALSTORAGE -->
+<div class="d-flex gap-3">
+    <h6 class="border w-100">Get Storage Value</h6>
+    <button class="btn btn-success border w-25" (click)="getValueStorage()">GET</button>
+</div>
+<div class="d-flex gap-3 mx-3">
+    <input type="text" class="form-control" placeholder="key" [(ngModel)]="getKey"><br />
+    <p class="text-start mt-2 w-100">value: <strong [style.color]="displayValue == 'invalid storage key'  ? '#c93838' : '#38c96a'">{{displayValue}}</strong></p>
+</div><br />
+
+
+<!-- REMOVE DATA FROM LOCALSTORAGE -->
+<div class="d-flex gap-3">
+    <h6 class="border w-100">Remove Storage Value</h6>
+    <button class="btn btn-danger border w-25" (click)="removeValueStorage()">REMOVE</button>
+</div>
+<div class="mx-3">
+    <input type="text" class="form-control" placeholder="key" [(ngModel)]="removeKey">
+</div><br />
+
+<!-- UPDATE DATA IN LOCALSTORAGE -->
+<div class="d-flex gap-3">
+    <h6 class="border w-100">Update Storage Value</h6>
+    <button class="btn btn-primary border w-25" (click)="updateValueStorage()">UPDATE</button>
+</div>
+<div class="d-flex gap-3 mx-3 mb-5">
+    <input type="text" class="form-control" placeholder="key" [(ngModel)]="updateKey">
+    <input type="text" class="form-control" placeholder="value" [(ngModel)]="updateValue">
+</div>

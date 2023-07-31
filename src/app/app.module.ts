@@ -8,7 +8,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HomeComponent } from './pages/home/home.component';
 
-import { DecoratorsComponent } from './pages/decorators/decorators.component';
+import { DecoratorsComponent } from './pages/decorator-navs/decorators.component';
 import { IPostComponent } from './decorators/input-decorator/i-post/i-post.component';
 import { IPostListComponent } from './decorators/input-decorator/i-post-list/i-post-list.component';
 import { UPostComponent } from './decorators/output-decorator/u-post/u-post.component';
@@ -31,12 +31,12 @@ import { ResizedListenerDirective } from './decorators/host-listener/listeners/r
 import { HostBinding1Directive } from './decorators/host-binding/bindings/host-binding-1.directive';
 import { HostBinding2Directive } from './decorators/host-binding/bindings/host-binding-2.directive';
 
-import { BindingsComponent } from './pages/bindings/bindings.component';
+import { BindingsComponent } from './pages/binding-navs/bindings.component';
 import { DataBindingComponent } from './bindings/data-binding/data-binding.component';
 import { EventBindingComponent } from './bindings/event-binding/event-binding.component';
 import { TwoWayBindingComponent } from './bindings/two-way-binding/two-way-binding.component';
 
-import { DirectivesComponent } from './pages/directives/directives.component';
+import { DirectivesComponent } from './pages/directive-navs/directives.component';
 import { NgForComponent } from './directives/ng-for/ng-for.component';
 import { NgIfComponent } from './directives/ng-if/ng-if.component';
 import { NgSwitchCaseComponent } from './directives/ng-switch-case/ng-switch-case.component';
@@ -50,7 +50,7 @@ import { PipesComponent } from './pipes/pipes.component';
 import { AppendPipe } from './pipes/append/append.pipe';
 import { SummaryPipe } from './pipes/summary/summary.pipe';
 
-import { FormsComponent } from './pages/forms/forms.component';
+import { FormsComponent } from './pages/form-navs/forms.component';
 import { DrivenFormComponent } from './forms/driven-form/driven-form.component';
 import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.component';
 import { ReactiveFormWithFormBuilderComponent } from './forms/reactive-form-with-form-builder/reactive-form-with-form-builder.component';
@@ -58,13 +58,16 @@ import { FormWithCustomValidationsComponent } from './forms/form-with-custom-val
 
 import { CalculatorComponent } from './services/calculator/calculator.component';
 
-import { RouteGuardsComponent } from './pages/route-guards/route-guards.component';
+import { RouteGuardsComponent } from './pages/route-guard-navs/route-guards.component';
 import { CanActivateComponent } from './route-guards/can-activate/can-activate.component';
 import { CanActivateChildComponent } from './route-guards/can-activate-child/can-activate-child.component';
 import { CanDeactivateComponent } from './route-guards/can-deactivate/can-deactivate.component';
 import { UserHomeComponent } from './route-guards/can-match/user-home/user-home.component';
 import { AdminDashboardComponent } from './route-guards/can-match/admin-dashboard/admin-dashboard.component';
 import { SellerDashboardComponent } from './route-guards/can-match/seller-dashboard/seller-dashboard.component';
+
+import { StoragesComponent } from './pages/storage-navs/storages.component';
+import { LocalStorageComponent } from './storages/local-storage/local-storage.component';
 
 @NgModule({
   declarations: [
@@ -128,6 +131,9 @@ import { SellerDashboardComponent } from './route-guards/can-match/seller-dashbo
     UserHomeComponent,
     AdminDashboardComponent,
     SellerDashboardComponent,
+
+    StoragesComponent,
+      LocalStorageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, NgbModule, FontAwesomeModule],
   providers: [],

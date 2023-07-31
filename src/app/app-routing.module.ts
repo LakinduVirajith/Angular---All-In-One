@@ -2,19 +2,19 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 
-import { DecoratorsComponent } from './pages/decorators/decorators.component';
+import { DecoratorsComponent } from './pages/decorator-navs/decorators.component';
 import { IPostComponent } from './decorators/input-decorator/i-post/i-post.component';
 import { UPostComponent } from './decorators/output-decorator/u-post/u-post.component';
 import { VcPostComponent } from './decorators/view-child-decorator/vc-post/vc-post.component';
 import { HostListenerComponent } from './decorators/host-listener/host-listener.component';
 import { HostBindingComponent } from './decorators/host-binding/host-binding.component';
 
-import { BindingsComponent } from './pages/bindings/bindings.component';
+import { BindingsComponent } from './pages/binding-navs/bindings.component';
 import { DataBindingComponent } from './bindings/data-binding/data-binding.component';
 import { EventBindingComponent } from './bindings/event-binding/event-binding.component';
 import { TwoWayBindingComponent } from './bindings/two-way-binding/two-way-binding.component';
 
-import { DirectivesComponent } from './pages/directives/directives.component';
+import { DirectivesComponent } from './pages/directive-navs/directives.component';
 import { NgForComponent } from './directives/ng-for/ng-for.component';
 import { NgIfComponent } from './directives/ng-if/ng-if.component';
 import { NgSwitchCaseComponent } from './directives/ng-switch-case/ng-switch-case.component';
@@ -24,7 +24,7 @@ import { CustomDirectiveComponent } from './directives/custom-directive/custom-d
 
 import { PipesComponent } from './pipes/pipes.component';
 
-import { FormsComponent } from './pages/forms/forms.component';
+import { FormsComponent } from './pages/form-navs/forms.component';
 import { DrivenFormComponent } from './forms/driven-form/driven-form.component';
 import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.component';
 import { ReactiveFormWithFormBuilderComponent } from './forms/reactive-form-with-form-builder/reactive-form-with-form-builder.component';
@@ -32,7 +32,7 @@ import { FormWithCustomValidationsComponent } from './forms/form-with-custom-val
 
 import { CalculatorComponent } from './services/calculator/calculator.component';
 
-import { RouteGuardsComponent } from './pages/route-guards/route-guards.component';
+import { RouteGuardsComponent } from './pages/route-guard-navs/route-guards.component';
 import { CanActivateComponent } from './route-guards/can-activate/can-activate.component';
 import { CanDeactivateComponent } from './route-guards/can-deactivate/can-deactivate.component';
 import { CanActivateChildComponent } from './route-guards/can-activate-child/can-activate-child.component';
@@ -44,6 +44,9 @@ import { authGuard } from './route-guards/guards/auth.guard';
 import { workStatusGuard } from './route-guards/guards/work-status.guard';
 import { sellerGuard } from './route-guards/guards/seller.guard';
 import { adminGuard } from './route-guards/guards/admin.guard';
+
+import { StoragesComponent } from './pages/storage-navs/storages.component';
+import { LocalStorageComponent } from './storages/local-storage/local-storage.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -87,6 +90,12 @@ const routes: Routes = [
   { path: 'can-match', component: AdminDashboardComponent, canMatch: [adminGuard]},
   { path: 'can-match', component: SellerDashboardComponent, canMatch: [sellerGuard]},
   { path: 'can-match', component: UserHomeComponent},
+
+  { path: 'storages', component: StoragesComponent},
+  { path: 'local-storage', component: LocalStorageComponent},
+  { path: 'session-storage', component: StoragesComponent},
+  { path: 'cookies', component: StoragesComponent},
+  { path: 'indexed-db', component: StoragesComponent}
 ];
 
 @NgModule({
