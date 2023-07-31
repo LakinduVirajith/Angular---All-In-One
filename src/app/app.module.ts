@@ -68,6 +68,7 @@ import { SellerDashboardComponent } from './route-guards/can-match/seller-dashbo
 
 import { StoragesComponent } from './pages/storage-navs/storages.component';
 import { LocalStorageComponent } from './storages/local-storage/local-storage.component';
+import { SessionStorageComponent } from './storages/session-storage/session-storage.component';
 
 @NgModule({
   declarations: [
@@ -134,6 +135,7 @@ import { LocalStorageComponent } from './storages/local-storage/local-storage.co
 
     StoragesComponent,
       LocalStorageComponent,
+      SessionStorageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, NgbModule, FontAwesomeModule],
   providers: [],

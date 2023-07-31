@@ -17,7 +17,7 @@ export class LocalStorageComponent {
   updateKey!: string;
   updateValue!: string;
 
-  // SET DATA IN LOCALSTORAGE
+  /* SET DATA IN LOCAL STORAGE */
   setValueStorage(){  
     localStorage.setItem(this.setKey, this.setValue);
 
@@ -25,7 +25,7 @@ export class LocalStorageComponent {
     this.setValue = '';
   }
   
-  // GET DATA FROM LOCALSTORAGE
+  /* GET DATA FROM LOCAL STORAGE */
   getValueStorage(){
     const value = localStorage.getItem(this.getKey);
 
@@ -33,7 +33,7 @@ export class LocalStorageComponent {
     else this.displayValue = 'invalid storage key';
   }
 
-  // REMOVE DATA FROM LOCALSTORAGE
+  /* REMOVE DATA FROM LOCAL STORAGE */
   removeValueStorage(){
     const value = localStorage.getItem(this.removeKey);
 
@@ -50,7 +50,7 @@ export class LocalStorageComponent {
     }
   }
   
-  // UPDATE DATA IN LOCALSTORAGE
+  /* UPDATE DATA IN LOCAL STORAGE */
   updateValueStorage(){
     const value = localStorage.getItem(this.updateKey);
 
