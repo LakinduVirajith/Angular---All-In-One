@@ -30,6 +30,8 @@ import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.compo
 import { ReactiveFormWithFormBuilderComponent } from './forms/reactive-form-with-form-builder/reactive-form-with-form-builder.component';
 import { FormWithCustomValidationsComponent } from './forms/form-with-custom-validations/form-with-custom-validations.component';
 
+import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.component';
+
 import { CalculatorComponent } from './services/calculator/calculator.component';
 
 import { RouteGuardsComponent } from './pages/route-guard-navs/route-guards.component';
@@ -83,6 +85,8 @@ const routes: Routes = [
   { path: 'reactive-form', component: ReactiveFormComponent },
   { path: 'reactive-form-with-form-builder', component: ReactiveFormWithFormBuilderComponent },
   { path: 'form-with-custom-validations', component: FormWithCustomValidationsComponent },
+
+  { path: 'lifecycle-hooks', component: LifecycleHooksComponent},
 
   { path: 'calculator-service', component: CalculatorComponent},
 

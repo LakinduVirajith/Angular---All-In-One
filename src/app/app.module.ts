@@ -56,6 +56,9 @@ import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.compo
 import { ReactiveFormWithFormBuilderComponent } from './forms/reactive-form-with-form-builder/reactive-form-with-form-builder.component';
 import { FormWithCustomValidationsComponent } from './forms/form-with-custom-validations/form-with-custom-validations.component';
 
+import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.component';
+import { LifecycleHooksChildComponent } from './lifecycle-hooks/lifecycle-hooks-child/lifecycle-hooks-child.component';
+
 import { CalculatorComponent } from './services/calculator/calculator.component';
 
 import { RouteGuardsComponent } from './pages/route-guard-navs/route-guards.component';
@@ -124,7 +127,10 @@ import { IndexedDbComponent } from './storages/indexed-db/indexed-db.component';
     ReactiveFormComponent,
     ReactiveFormWithFormBuilderComponent,
     FormWithCustomValidationsComponent,
-    
+
+    LifecycleHooksComponent,
+    LifecycleHooksChildComponent,
+
     CalculatorComponent,
           
     RouteGuardsComponent,
@@ -136,10 +142,10 @@ import { IndexedDbComponent } from './storages/indexed-db/indexed-db.component';
     SellerDashboardComponent,
 
     StoragesComponent,
-      LocalStorageComponent,
-      SessionStorageComponent,
-      CookiesComponent,
-      IndexedDbComponent,
+    LocalStorageComponent,
+    SessionStorageComponent,
+    CookiesComponent,
+    IndexedDbComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, NgbModule, FontAwesomeModule],
   providers: [],

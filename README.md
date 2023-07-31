@@ -16,6 +16,8 @@
 
 [Form](#form)
 
+[Lifecycle Hooks](#lifecycle-hooks)
+
 [Services and Dependency Injection](#services-and-dependency-injection)
 
 [Route Guards](#route-guards)
@@ -403,6 +405,35 @@ Handle form submissions:
 For template-driven forms: Use the (ngSubmit) event to handle form submissions.
 For reactive forms: Attach a listener to the FormGroup and handle form submissions programmatically.
 
+## Lifecycle Hooks 
+
+Angular Lifecycle Hooks are methods provided by Angular that allow you to tap into various stages of a component's lifecycle. These hooks enable you to perform specific actions or execute code at certain moments during the lifecycle of a component, such as when it is being created, rendered, updated, or destroyed. Understanding these hooks is crucial for building effective Angular applications and managing the behavior of components.
+
+Angular provides eight different lifecycle hooks, which can be categorized into four phases.
+
+#### 1. Creation phase
+
+* ngOnChanges: Called whenever the input properties of a component change.
+
+* ngOnInit: Called once after the component is initialized and all its inputs are set.
+
+* ngDoCheck: Called during every change detection run, allowing you to implement your custom change detection logic.
+
+#### 2. Update phase
+
+* ngAfterContentInit: Called after content (e.g., projected content) has been initialized.
+
+* ngAfterContentChecked: Called after every check of the content (e.g., projected content).
+
+#### 3. Update and View phase
+
+* ngAfterViewInit: Called after the component's view (and child views) have been initialized.
+
+* ngAfterViewChecked: Called after every check of the component's view (and child views).
+
+#### 4. Destruction phase
+
+* ngOnDestroy: Called just before the component is destroyed and removed from the DOM.
 
 ## Services and Dependency Injection
 
@@ -626,8 +657,4 @@ Content Security Policy (CSP)
 
 HTTP Security Headers
 
-<!-- Cookies
-
 Cache Handling
-
-Local Storage and Session Storage -->

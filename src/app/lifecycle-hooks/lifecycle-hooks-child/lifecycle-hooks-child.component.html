@@ -1,0 +1,13 @@
+<h4>Lifecycle Hooks Child Works</h4><br />
+
+<div *ngFor="let message of messageArray; let ind = index;">
+    <div class="d-flex">
+        <p class="border">{{ind + 1}}</p>
+        <p class="border text w-100">{{message}}</p>
+    </div>
+</div><br />
+
+<div class="border mb-5">
+    <h6>{{parentMessage}}</h6><br />
+    <button class="btn btn-dark" (click)="chageParentMessage()">Change Message</button>
+</div>
