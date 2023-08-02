@@ -106,7 +106,9 @@ const routes: Routes = [
   { path: 'cookies', component: CookiesComponent},
   { path: 'indexed-db', component: IndexedDbComponent},
 
-  { path: 'http-client', component: HttpClientComponent}
+  { path: 'http-client', component: HttpClientComponent},
+
+  { path: 'animations', component: HttpClientComponent}
 ];
 
 @NgModule({
