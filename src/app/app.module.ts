@@ -90,6 +90,7 @@ import { BouncingComponent } from './animations/bouncing/bouncing.component';
 import { FlippingComponent } from './animations/flipping/flipping.component';
 import { ScrollComponent } from './animations/scroll/scroll.component';
 import { SequenceComponent } from './animations/sequence/sequence.component';
+import { GroupComponent } from './animations/group/group.component';
 
 @NgModule({
   declarations: [
@@ -176,6 +177,7 @@ import { SequenceComponent } from './animations/sequence/sequence.component';
     FlippingComponent,
     ScrollComponent,
     SequenceComponent,
+    GroupComponent,
   ],
   imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, FormsModule, ReactiveFormsModule, NgbModule, FontAwesomeModule, HttpClientModule],
   providers: [],

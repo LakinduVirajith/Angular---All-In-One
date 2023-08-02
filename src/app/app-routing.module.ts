@@ -66,6 +66,7 @@ import { BouncingComponent } from './animations/bouncing/bouncing.component';
 import { FlippingComponent } from './animations/flipping/flipping.component';
 import { ScrollComponent } from './animations/scroll/scroll.component';
 import { SequenceComponent } from './animations/sequence/sequence.component';
+import { GroupComponent } from './animations/group/group.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -130,7 +131,8 @@ const routes: Routes = [
   { path: 'bouncing', component: BouncingComponent},
   { path: 'flipping', component: FlippingComponent},
   { path: 'scroll', component: ScrollComponent},
-  { path: 'sequence', component: SequenceComponent}
+  { path: 'sequence', component: SequenceComponent},
+  { path: 'group', component: GroupComponent}
 ];
 
 @NgModule({
