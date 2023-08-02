@@ -62,6 +62,7 @@ import { ScaleComponent } from './animations/scale/scale.component';
 import { RotateComponent } from './animations/rotate/rotate.component';
 import { ColorChangeComponent } from './animations/color-change/color-change.component';
 import { KeyframeComponent } from './animations/keyframe/keyframe.component';
+import { BouncingComponent } from './animations/bouncing/bouncing.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -122,7 +123,8 @@ const routes: Routes = [
   { path: 'scale', component: ScaleComponent},
   { path: 'rotate', component: RotateComponent},
   { path: 'color-change', component: ColorChangeComponent},
-  { path : 'keyframe', component: KeyframeComponent}
+  { path: 'keyframe', component: KeyframeComponent},
+  { path: 'bouncing', component: BouncingComponent}
 ];
 
 @NgModule({
