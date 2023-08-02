@@ -55,6 +55,9 @@ import { IndexedDbComponent } from './storages/indexed-db/indexed-db.component';
 
 import { HttpClientComponent } from './http-client/http-client.component';
 
+import { AnimationsNavComponent } from './pages/animations-nav/animations-nav.component';
+import { FadeInAndOutComponent } from './animations/fade-in-and-out/fade-in-and-out.component';
+
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
@@ -108,7 +111,8 @@ const routes: Routes = [
 
   { path: 'http-client', component: HttpClientComponent},
 
-  { path: 'animations', component: HttpClientComponent}
+  { path: 'animations', component: AnimationsNavComponent},
+  { path: 'fade-in-and-out', component: FadeInAndOutComponent},
 ];
 
 @NgModule({

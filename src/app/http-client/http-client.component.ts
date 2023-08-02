@@ -25,7 +25,7 @@ export class HttpClientComponent implements OnInit{
           if(response.status == 200) this.fetchResult(response.result);
           else this.fetchError(response);
       },error: (error) => {
-        console.log(error);
+        console.log(error.message);
         this.isPageLoading = true;
       },complete: () => {
         this.isPageLoading = true;

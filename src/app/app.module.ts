@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -78,6 +79,9 @@ import { IndexedDbComponent } from './storages/indexed-db/indexed-db.component';
 
 import { HttpClientComponent } from './http-client/http-client.component';
 
+import { AnimationsNavComponent } from './pages/animations-nav/animations-nav.component';
+import { FadeInAndOutComponent } from './animations/fade-in-and-out/fade-in-and-out.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -151,8 +155,11 @@ import { HttpClientComponent } from './http-client/http-client.component';
     IndexedDbComponent,
 
     HttpClientComponent,
+
+    AnimationsNavComponent,
+    FadeInAndOutComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, NgbModule, FontAwesomeModule, HttpClientModule],
+  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, FormsModule, ReactiveFormsModule, NgbModule, FontAwesomeModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
