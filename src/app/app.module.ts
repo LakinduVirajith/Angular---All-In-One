@@ -81,6 +81,7 @@ import { HttpClientComponent } from './http-client/http-client.component';
 
 import { AnimationsNavComponent } from './pages/animations-nav/animations-nav.component';
 import { FadeInAndOutComponent } from './animations/fade-in-and-out/fade-in-and-out.component';
+import { SlideInAndOutComponent } from './animations/slide-in-and-out/slide-in-and-out.component';
 
 @NgModule({
   declarations: [
@@ -158,6 +159,7 @@ import { FadeInAndOutComponent } from './animations/fade-in-and-out/fade-in-and-
 
     AnimationsNavComponent,
     FadeInAndOutComponent,
+    SlideInAndOutComponent,
   ],
   imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, FormsModule, ReactiveFormsModule, NgbModule, FontAwesomeModule, HttpClientModule],
   providers: [],
