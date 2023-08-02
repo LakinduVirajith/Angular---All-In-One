@@ -85,6 +85,7 @@ import { SlideInAndOutComponent } from './animations/slide-in-and-out/slide-in-a
 import { ScaleComponent } from './animations/scale/scale.component';
 import { RotateComponent } from './animations/rotate/rotate.component';
 import { ColorChangeComponent } from './animations/color-change/color-change.component';
+import { KeyframeComponent } from './animations/keyframe/keyframe.component';
 
 @NgModule({
   declarations: [
@@ -166,6 +167,7 @@ import { ColorChangeComponent } from './animations/color-change/color-change.com
     ScaleComponent,
     RotateComponent,
     ColorChangeComponent,
+    KeyframeComponent,
   ],
   imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, FormsModule, ReactiveFormsModule, NgbModule, FontAwesomeModule, HttpClientModule],
   providers: [],

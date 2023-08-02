@@ -61,6 +61,7 @@ import { SlideInAndOutComponent } from './animations/slide-in-and-out/slide-in-a
 import { ScaleComponent } from './animations/scale/scale.component';
 import { RotateComponent } from './animations/rotate/rotate.component';
 import { ColorChangeComponent } from './animations/color-change/color-change.component';
+import { KeyframeComponent } from './animations/keyframe/keyframe.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -121,6 +122,7 @@ const routes: Routes = [
   { path: 'scale', component: ScaleComponent},
   { path: 'rotate', component: RotateComponent},
   { path: 'color-change', component: ColorChangeComponent},
+  { path : 'keyframe', component: KeyframeComponent}
 ];
 
 @NgModule({
