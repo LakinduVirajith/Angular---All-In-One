@@ -87,6 +87,7 @@ import { RotateComponent } from './animations/rotate/rotate.component';
 import { ColorChangeComponent } from './animations/color-change/color-change.component';
 import { KeyframeComponent } from './animations/keyframe/keyframe.component';
 import { BouncingComponent } from './animations/bouncing/bouncing.component';
+import { FlippingComponent } from './animations/flipping/flipping.component';
 
 @NgModule({
   declarations: [
@@ -170,6 +171,7 @@ import { BouncingComponent } from './animations/bouncing/bouncing.component';
     ColorChangeComponent,
     KeyframeComponent,
     BouncingComponent,
+    FlippingComponent,
   ],
   imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, FormsModule, ReactiveFormsModule, NgbModule, FontAwesomeModule, HttpClientModule],
   providers: [],
