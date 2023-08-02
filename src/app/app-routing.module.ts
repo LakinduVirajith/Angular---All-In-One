@@ -132,7 +132,7 @@ const routes: Routes = [
   { path: 'flipping', component: FlippingComponent},
   { path: 'scroll', component: ScrollComponent},
   { path: 'sequence', component: SequenceComponent},
-  { path: 'group', component: GroupComponent}
+  { path: 'group', component: GroupComponent},
 ];
 
 @NgModule({

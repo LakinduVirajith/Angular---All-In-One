@@ -177,7 +177,7 @@ import { GroupComponent } from './animations/group/group.component';
     FlippingComponent,
     ScrollComponent,
     SequenceComponent,
-    GroupComponent,
+    GroupComponent
   ],
   imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, FormsModule, ReactiveFormsModule, NgbModule, FontAwesomeModule, HttpClientModule],
   providers: [],
