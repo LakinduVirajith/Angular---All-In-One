@@ -55,6 +55,19 @@ import { IndexedDbComponent } from './storages/indexed-db/indexed-db.component';
 
 import { HttpClientComponent } from './http-client/http-client.component';
 
+import { AnimationsNavComponent } from './pages/animations-nav/animations-nav.component';
+import { FadeInAndOutComponent } from './animations/fade-in-and-out/fade-in-and-out.component';
+import { SlideInAndOutComponent } from './animations/slide-in-and-out/slide-in-and-out.component';
+import { ScaleComponent } from './animations/scale/scale.component';
+import { RotateComponent } from './animations/rotate/rotate.component';
+import { ColorChangeComponent } from './animations/color-change/color-change.component';
+import { KeyframeComponent } from './animations/keyframe/keyframe.component';
+import { BouncingComponent } from './animations/bouncing/bouncing.component';
+import { FlippingComponent } from './animations/flipping/flipping.component';
+import { ScrollComponent } from './animations/scroll/scroll.component';
+import { SequenceComponent } from './animations/sequence/sequence.component';
+import { GroupComponent } from './animations/group/group.component';
+
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
@@ -106,7 +119,20 @@ const routes: Routes = [
   { path: 'cookies', component: CookiesComponent},
   { path: 'indexed-db', component: IndexedDbComponent},
 
-  { path: 'http-client', component: HttpClientComponent}
+  { path: 'http-client', component: HttpClientComponent},
+
+  { path: 'animations', component: AnimationsNavComponent},
+  { path: 'fade-in-and-out', component: FadeInAndOutComponent},
+  { path: 'slide-in-and-out', component: SlideInAndOutComponent},
+  { path: 'scale', component: ScaleComponent},
+  { path: 'rotate', component: RotateComponent},
+  { path: 'color-change', component: ColorChangeComponent},
+  { path: 'keyframe', component: KeyframeComponent},
+  { path: 'bouncing', component: BouncingComponent},
+  { path: 'flipping', component: FlippingComponent},
+  { path: 'scroll', component: ScrollComponent},
+  { path: 'sequence', component: SequenceComponent},
+  { path: 'group', component: GroupComponent},
 ];
 
 @NgModule({

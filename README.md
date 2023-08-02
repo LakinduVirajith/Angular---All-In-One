@@ -1,30 +1,155 @@
 # Angular---All-In-One
 
+# Spectator's Guide
+
 [Angular CLI and Project Setup](#angular-cli-and-project-setup)
 
-[Routing and Navigation](#routing-and-navigation)
+[Angular Concepts](#angular-concepts)
 
-[Lazy Loading](#lazy-loading)
+* [Routing and Navigation](#routing-and-navigation)
 
-[Decorators](#decorators)
+* [Lazy Loading](#lazy-loading)
 
-[Data Binding](#data-binding)
+* [Decorators](#decorators)
 
-[Directives](#directives)
+* [Data Binding](#data-binding)
 
-[Pipes](#pipes)
+* [Directives](#directives)
 
-[Form](#form)
+* [Pipes](#pipes)
 
-[Lifecycle Hooks](#lifecycle-hooks)
+* [Form](#form)
 
-[Services and Dependency Injection](#services-and-dependency-injection)
+* [Lifecycle Hooks](#lifecycle-hooks)
 
-[Route Guards](#route-guards)
+* [Services and Dependency Injection](#services-and-dependency-injection)
 
-[Storage](#storage)
+* [Route Guards](#route-guards)
 
-[Observables](#observables)
+* [Storage](#storage)
+
+* [HTTP Client and APIs](#http-client-and-apis)
+
+* [Animations](#animations)
+
+[To Additional Knowledge About Angular](#to-additional-knowledge-about-angular)
+
+* [Angular Compiler and AOT (Ahead-of-Time) Compilation](#angular-compiler-and-aot-ahead-of-time-compilation)
+
+* [Angular Material and UI Components](#angular-material-and-ui-components)
+
+* [Angular Deployment and Hosting](#angular-deployment-and-hosting)
+
+* [Angular Best Practices and Style Guidelines](#angular-best-practices-and-style-guidelines)
+
+[Project Dependencies](#project-dependencies)
+
+<br />
+
+# ANGULAR CLI AND PROJECT SETUP
+
+Angular CLI (Command Line Interface) is a powerful tool provided by the Angular team to facilitate the development of Angular applications. It offers a set of commands that help you create, manage, and build Angular projects easily and efficiently. Angular CLI abstracts many complex tasks and configurations, allowing developers to focus on building application features rather than setting up the project from scratch.
+
+## Installing Angular CLI
+
+```
+npm install -g @angular/cli
+```
+
+## Angular CLI Version
+
+```
+ng version
+```
+
+## Install Project
+
+```
+ng new your-project-name
+```
+
+## Update Project To Latest Version
+
+```
+ng update
+```
+```
+ng update @angular/cli
+```
+```
+ng update @angular/core
+```
+
+## Development Server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+## Code Scaffolding
+
+To Generate Component: 
+```
+ng g c component-name
+```
+
+To Generate Module: ng g m 
+```
+module-name
+```
+
+To Generate Directive: ng g d 
+```
+directive-name
+```
+
+To Generate Pipe: ng g p 
+```
+pipe-name
+```
+
+To Generate Service: ng g s 
+```
+service-name
+```
+
+To Generate Class: ng g cl 
+```
+class-name
+```
+
+To Generate Guard: ng g g 
+```
+guard-name
+```
+
+To Generate Interface: ng g i 
+```
+interface-name
+```
+
+To Generate Enum: ng g e 
+```
+enum-name
+```
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+<br />
+
+# ANGULAR CONCEPTS
 
 ## Components
 
@@ -206,7 +331,7 @@ const routes: Routes = [
 
 Lazy Loading is a technique in Angular that allows you to load specific parts of your application only when they are needed, rather than loading the entire application upfront. This can significantly improve the initial loading time and overall performance of your application, especially in large-scale projects with multiple modules and complex components.
 
-`Benefits of Lazy Loading`
+#### Benefits of Lazy Loading
 
 * Faster Initial Load: Users see the core part of the application quickly, improving the user experience.
 
@@ -216,7 +341,7 @@ Lazy Loading is a technique in Angular that allows you to load specific parts of
 
 * Modular Development: Developers can work on different modules independently, making code maintenance and collaboration more manageable.
 
-`To implement Lazy Loading in Angular, you need to`
+#### To implement Lazy Loading in Angular, you need to
 
 * Organize your application into feature modules.
 
@@ -231,7 +356,7 @@ const routes: Routes = [
   // Other routes...
 ];
 ```
-`CLI generate command`
+#### CLI generate command
 ```
 ng generate module module-name --route route-path --module app-module-name
 ```
@@ -242,7 +367,7 @@ route-path: Replace this with the route path for the lazy-loaded module. This pa
 
 app-module-name: Replace this with the name of the root module of your application. This is the module where the lazy-loaded module will be imported.
 
-`Example command`
+#### Example command
 ```
 ng generate module dashboard --route dashboard --module app
 ```
@@ -273,7 +398,7 @@ Decorators are extensively used in Angular to enable features like component met
 
 Data binding is a fundamental concept in Angular that allows you to connect and synchronize data between the component class (the business logic) and the component template (the user interface). It enables you to display dynamic data, handle user input, and respond to changes in the data seamlessly.
 
-`One-Way Binding`
+#### One-Way Binding
 
 One-way binding means data flows in only one direction, from the component class to the template. It allows you to display data from the component in the template and handle events in the template that trigger actions in the component. But any changes to the data in the template do not affect the component.
 
@@ -289,7 +414,7 @@ One-way binding means data flows in only one direction, from the component class
 
 * Event Binding
 
-`Two-Way Binding`
+#### Two-Way Binding
 
 Two-way binding means data flows in both directions, between the component class and the template. It allows you to not only display data from the component in the template but also automatically keep the data in the component in sync with changes made in the template.
 
@@ -347,7 +472,7 @@ Angular pipes are a powerful feature that allows you to transform and format dat
 * Custom Pipes:
 You can create your own custom pipes to perform specific data transformations. To create a custom pipe, you need to implement the PipeTransform interface and define the transform() method. Custom pipes are useful when you have repetitive data transformations in your application that you want to encapsulate and reuse.
 
-`Chaining Pipes`
+#### Chaining Pipes
 
 You can chain multiple pipes together to perform multiple transformations on the same data.
 
@@ -363,7 +488,7 @@ In Angular, forms are a critical part of building interactive and data-driven we
 
 Template-driven forms are easier to set up and are ideal for simple forms with basic validation requirements. They are defined within the template (HTML) itself using Angular's built-in directives.
 
-`Key characteristics`
+#### Key characteristics
 
 * Directives: Template-driven forms use directives such as ngForm, ngModel, and ngSubmit.
 
@@ -377,7 +502,7 @@ Template-driven forms are easier to set up and are ideal for simple forms with b
 
 Reactive forms are more flexible and scalable, making them suitable for complex forms and applications with advanced validation requirements. They are built programmatically using TypeScript.
 
-`Key characteristics`
+#### Key characteristics
 
 * FormGroup, FormControl, and FormArray: Reactive forms are based on classes like FormGroup, FormControl, and FormArray to represent the form structure.
 
@@ -443,7 +568,7 @@ Angular Services and Dependency Injection are key concepts in Angular that work 
 
 Angular Services are classes that are designed to provide specific functionality and data to various parts of an application. Services encapsulate the business logic, data access, and other functionalities that are not directly related to the presentation layer (components). They act as singletons, meaning there is only one instance of a service throughout the application.
 
-`Key characteristics of Angular Services`
+#### Key characteristics of Angular Services
 
 * Singleton Instances: Angular maintains a single instance of a service, and this instance is shared across all the components and other services that inject it. This ensures that data is shared consistently across different parts of the application.
 
@@ -457,7 +582,7 @@ Angular Services are classes that are designed to provide specific functionality
 
 Dependency Injection is a design pattern used in Angular to provide instances of dependencies to classes that require them. With DI, a class (a component or service) declares its dependencies instead of creating them directly. Angular's DI system is responsible for creating and managing instances of the required dependencies and injecting them into the dependent classes.
 
-`Key concepts of Dependency Injection in Angular`
+#### Key concepts of Dependency Injection in Angular
 
 * Providers: Providers are responsible for creating instances of services or other objects that will be injected. They tell Angular how to create and deliver dependencies.
 
@@ -515,7 +640,7 @@ IndexedDB is a more powerful storage mechanism that allows you to store large am
 
 The HTTP Client is a module in Angular that allows your application to make HTTP requests to communicate with servers, external APIs, or other web services. It provides a way to send HTTP requests and handle the responses in a convenient and structured manner.
 
-`Key features of Angular HTTP Client`
+#### Key features of Angular HTTP Client
 
 * Makes asynchronous HTTP requests using the HTTP methods like GET, POST, PUT, DELETE, etc.
 
@@ -529,7 +654,7 @@ Offers options for error handling and response transformation.
 APIs (Application Programming Interfaces):
 APIs are a set of rules and protocols that allow different software applications to communicate with each other. They define how different components of software systems should interact and exchange data. APIs enable developers to access specific functionalities and data from other applications or services.
 
-`Types of APIs`
+#### Types of APIs
 
 * Web APIs: These are APIs exposed by web servers to interact with web applications over HTTP. They allow data exchange between client and server applications.
 
@@ -539,7 +664,7 @@ APIs are a set of rules and protocols that allow different software applications
 
 * Native APIs: Native APIs are provided by operating systems or programming languages to interact with the hardware and perform low-level tasks.
 
-`HttpParams`
+#### HttpParams
 
 ```
 import { HttpParams } from '@angular/common/http';
@@ -577,73 +702,372 @@ const paramString = params.toString();
 console.log(paramString); // Output: 'id=456&id=789'
 ```
 
-## Observables
+## Animations
 
----
+Angular Animations is a feature in Angular that allows you to add animated effects and transitions to your application's UI elements. With Angular Animations, you can make elements fade in, move, resize, change colors, and more, providing a visually appealing and interactive user experience.
 
-# ANGULAR CLI AND PROJECT SETUP
+#### Key Concepts:
 
-Angular CLI (Command Line Interface) is a powerful tool provided by the Angular team to facilitate the development of Angular applications. It offers a set of commands that help you create, manage, and build Angular projects easily and efficiently. Angular CLI abstracts many complex tasks and configurations, allowing developers to focus on building application features rather than setting up the project from scratch.
+#### 1. Animations: 
 
-## Installing Angular CLI
+In Angular, animations are defined as a set of styles and transitions that change an element's appearance or position over time.
 
-npm install -g @angular/cli
+#### 2. Triggers: 
 
-## Angular CLI Version
+An animation trigger is associated with an HTML element. It defines the conditions and animations to apply when the element is in a particular state.
 
-ng version
+#### 3. States: 
 
-## Install Project
+An animation state represents a specific condition or state of an element. For example, a button can have states like 'normal' and 'hover', with corresponding styles and transitions.
 
-ng new `your-project-name`
+#### 4. Transitions: 
 
-## Update Project To Latest Version
+Transitions define how an element moves from one state to another. They include information such as duration, easing function, and target styles.
 
-ng update
+#### How to Use:
 
-ng update @angular/cli
+Import BrowserAnimationsModule: Import the BrowserAnimationsModule module in your Angular module to enable animations in your application.
 
-ng update @angular/core
+Define Animations: In your component, use @angular/animations functions to define animations, including triggers, states, and transitions.
 
-## Development Server
+Apply Animations: Apply the animation trigger to your HTML elements using the [@triggerName] syntax. This will associate the animations with the elements.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Handle Animation Events (Optional): You can listen to animation events like start, done, or void to trigger specific actions or execute code when animations start or complete.
 
-## Code Scaffolding
+#### Animations:
 
-To Generate Component: ng g c `component-name`
+#### 1. Fade In and Out:
 
-To Generate Module: ng g m `module-name`
+A simple fade-in and fade-out animation for an element.
 
-To Generate Directive: ng g d `directive-name`
+#### 2. Slide In and Out:
 
-To Generate Pipe: ng g p `pipe-name`
+An animation that slides an element into and out of the view.
 
-To Generate Service: ng g s `service-name`
+#### 3. Scale:
 
-To Generate Class: ng g cl `class-name`
+An animation that scales an element up or down.
 
-To Generate Guard: ng g g `guard-name`
+#### 4. Rotate:
 
-To Generate Interface: ng g i `interface-name`
+An animation that rotates an element around its axis.
 
-To Generate Enum: ng g e `enum-name`
+#### 5. Color Change:
 
-## Build
+An animation that changes the color of an element.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+#### 6. Keyframe Animation:
 
-## Running unit tests
+A complex animation that involves multiple intermediate states, achieved using keyframes.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+#### 7. Bouncing Animation:
 
-## Running end-to-end tests
+An animation that simulates a bouncing effect for an element.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+#### 8. Flipping Animation:
 
-## Further help
+An animation that flips an element horizontally or vertically.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#### 9. Scroll Animation:
+
+An animation that triggers when the user scrolls to a specific element on the page.
+
+#### 10. Sequence Animation:
+
+An animation that combines multiple animations in a specific sequence.
+
+#### 11. Parallel Animation:
+
+An animation that runs multiple animations simultaneously.
+
+#### 12. Group Animation:
+
+An animation that groups multiple animations together.
+
+#### 13. Route Transition Animation:
+
+An animation that occurs when navigating between different routes in an Angular application.
+
+#### 14. Loading Spinners:
+
+An animation that shows a loading spinner while data is being fetched.
+
+#### 15. Progress Bar:
+
+An animation that displays a progress bar indicating the progress of an operation.
+
+#### Benefits:
+
+* Angular Animations help create engaging and interactive user experiences.
+
+* They improve the overall aesthetics and professionalism of your application.
+
+* Animations can guide users, provide feedback, and make the UI more intuitive.
+
+* With smooth transitions, your application will feel more responsive and enjoyable.
+
+In summary, Angular Animations is a powerful feature that allows you to easily add animations and transitions to your Angular application without the need for complex CSS or JavaScript code. By using triggers, states, and transitions, you can create visually appealing and interactive UI elements that enhance the overall user experience.
+
+<br />
+
+# TO ADDITIONAL KNOWLEDGE ABOUT ANGULAR
+
+## Angular Compiler and AOT (Ahead-of-Time) Compilation
+
+In Angular, the compiler is a crucial part of the framework that translates your Angular application's templates, components, and other metadata into executable JavaScript code that can be understood and run by the browser.
+
+There are two main types of Angular compilation:
+
+#### 1. Just-In-Time (JIT) Compilation:
+
+JIT compilation is the default compilation method used during development. When you serve your Angular application using the Angular CLI (ng serve), it employs JIT compilation.
+
+With JIT compilation, the Angular compiler runs in the browser at runtime. When a user loads the application in the browser, the templates and components are compiled into JavaScript code on the fly, just before they are rendered.
+
+JIT compilation offers faster development cycles, as you can quickly see the changes you make to templates and components without the need for a separate build step. However, it adds some overhead during runtime as the compilation process occurs in the browser.
+
+#### 2. Ahead-of-Time (AOT) Compilation:
+
+AOT compilation is an alternative compilation method used for production builds. When you build your Angular application using the Angular CLI with the --aot flag (ng build --aot), it enables AOT compilation.
+
+With AOT compilation, the Angular compiler runs at build time, before deploying the application. During the build process, the templates and components are compiled into optimized JavaScript code and saved as part of the application bundle.
+
+AOT compilation offers several benefits, including faster load times, smaller bundle sizes, and improved runtime performance. By pre-compiling the templates, the browser doesn't need to compile them at runtime, leading to reduced initial loading times for the application.
+
+#### Benefits of AOT Compilation:
+
+* Faster Load Times: AOT-compiled applications load more quickly, as the templates are already compiled before deployment.
+
+* Smaller Bundle Sizes: AOT compilation eliminates the need for the Angular compiler in the final bundle, resulting in smaller bundle sizes.
+
+* Template Security: AOT compilation detects and prevents certain template-related errors at build time, ensuring better application security.
+
+* Optimized Performance: By reducing the overhead of in-browser compilation, AOT-compiled applications typically have improved runtime performance.
+
+It's important to note that AOT compilation is recommended for production builds to achieve optimal performance and user experience. During development, you can still use JIT compilation for faster iteration cycles.
+
+In summary, the Angular compiler is responsible for translating your application's templates and components into executable JavaScript code. AOT (Ahead-of-Time) compilation is an optimization technique that pre-compiles the templates during the build process, leading to faster load times, smaller bundle sizes, and improved runtime performance in production environments.
+
+## Angular Material and UI Components
+
+Angular Material is a UI component library provided by the Angular team that implements the Material Design principles developed by Google. It offers a set of pre-built and customizable UI components to help developers create modern and visually appealing user interfaces for Angular applications.
+
+Key features of Angular Material:
+
+#### 1. Material Design Guidelines: 
+
+Angular Material follows the Material Design guidelines, which provide a set of principles, styles, and design patterns for creating a consistent and visually appealing user experience across different devices and platforms.
+
+#### 2. Rich Set of UI Components: 
+
+Angular Material provides a comprehensive collection of UI components, including buttons, cards, dialogs, menus, sliders, snackbar, tabs, and more. These components are designed to be responsive and accessible, ensuring a seamless experience across various screen sizes and assistive technologies.
+
+#### 3. Theming and Customization: 
+
+Angular Material allows you to customize the look and feel of the UI components to match your application's branding. You can change the color palette, typography, and other styles using Angular's theming capabilities.
+
+#### 4. Responsive Layout: 
+
+Angular Material components are designed to adapt to different screen sizes and orientations, making them mobile-friendly and responsive by default.
+
+#### 5. Accessibility: 
+
+Angular Material components are built with accessibility in mind, ensuring that users with disabilities can interact with your application using assistive technologies like screen readers.
+
+#### 6. Modularity:
+
+ Angular Material components are modular, meaning you can import only the components you need, reducing the overall bundle size and improving application performance.
+
+#### 7.Animations: 
+
+Angular Material includes built-in animations that provide smooth transitions and interactions between UI elements.
+
+#### Using Angular Material in your Angular application:
+
+Install Angular Material: To use Angular Material in your project, you need to install it first. You can do this using npm or yarn:
+
+```
+npm install @angular/material @angular/cdk @angular/animations
+```
+
+Import Angular Material Modules: After installing, you need to import the required Angular Material modules in your Angular module (e.g., app.module.ts):
+
+```
+import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+// Import other required modules...
+
+@NgModule({
+  imports: [
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatCardModule,
+    // Add other modules...
+  ],
+  // ... other declarations and providers ...
+})
+export class AppModule { }
+```
+
+Use Angular Material Components: You can now use Angular Material components in your templates:
+
+```
+<button mat-button color="primary">Click Me</button>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Title</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    Content goes here...
+  </mat-card-content>
+</mat-card>
+```
+
+In this example, we've used the mat-button directive for a button with the primary color, and the mat-card component to create a card with a title and content.
+
+By leveraging Angular Material's UI components, you can accelerate the development of your Angular application, maintain a consistent design language, and deliver a seamless user experience to your users.
+
+## Angular Deployment and Hosting
+
+Angular deployment and hosting involve making your Angular application accessible to users on the internet. Deployment refers to the process of preparing your application for production, while hosting involves choosing a server or service to host your application and make it publicly available.
+
+Here are the steps involved in Angular deployment and hosting:
+
+#### 1. Build your Angular Application: 
+
+Before deploying your Angular application, you need to build it. Angular applications are typically built using the Angular CLI. Use the following command to build your application for production:
+
+```
+ng build --prod
+```
+
+This command generates a production-ready version of your application in the dist folder.
+
+#### 2. Choose a Hosting Provider:
+
+To host your Angular application, you need to choose a hosting provider. There are various hosting options available, including shared hosting, virtual private servers (VPS), dedicated servers, cloud hosting, and serverless options.
+Popular hosting providers include:
+
+* Netlify
+
+* Vercel
+
+* GitHub Pages
+
+* Firebase Hosting
+
+* AWS S3 and CloudFront
+
+* Heroku
+
+* DigitalOcean
+
+#### Configure Hosting Settings: 
+
+Once you choose a hosting provider, follow their instructions to configure your hosting settings. This usually involves setting up your domain name, configuring DNS records, and providing the path to your built Angular application files.
+
+#### Upload Files to Hosting Server: 
+
+After configuring the hosting settings, you need to upload your built Angular application files to the hosting server. The method of file upload depends on the hosting provider. Some providers offer an FTP client or a web-based file manager, while others might provide a Git-based deployment process.
+
+#### Set Up SSL Certificate (Optional): 
+
+It is highly recommended to secure your Angular application with an SSL certificate to enable HTTPS. Many hosting providers offer free SSL certificates using services like Let's Encrypt.
+
+#### Test and Verify Deployment: 
+
+Once your Angular application is deployed, test it thoroughly to ensure everything works as expected. Verify that all the features and functionalities are working correctly in the production environment.
+
+#### Monitor Performance and Scalability: 
+
+Monitor your deployed application's performance and scalability. Use tools like Google Analytics or other performance monitoring tools to gain insights into user behavior and application performance.
+
+#### Continuous Deployment (Optional): 
+
+To streamline your deployment process, you can set up continuous deployment pipelines using tools like GitHub Actions, Travis CI, or other CI/CD services. This allows you to automatically deploy new changes to your application whenever you push code to your version control repository.
+
+Remember to keep your application and dependencies up to date, as well as secure with regular security updates.
+
+Deploying and hosting an Angular application involves a few technical steps, but with the right hosting provider and configuration, you can make your application accessible to users globally and provide a seamless user experience.
+
+## Angular Best Practices and Style Guidelines
+
+Following best practices and adhering to style guidelines is essential for writing clean, maintainable, and scalable Angular applications. Here are some Angular best practices and style guidelines:
+
+#### 1. Consistent Coding Style:
+
+Use consistent indentation (usually 2 or 4 spaces) to improve code readability.
+Choose descriptive and meaningful variable and function names.
+Follow a consistent naming convention for files, classes, and selectors (e.g., camelCase, kebab-case).
+Organize imports alphabetically to make it easier to find dependencies.
+
+#### 2. Modular Architecture:
+
+Organize your Angular application into smaller modules based on feature or functionality.
+Aim for Single Responsibility Principle (SRP) by creating components, services, and modules with well-defined responsibilities.
+
+#### 3. Components and Directives:
+
+Keep components and directives simple and focused on one task.
+Use OnPush change detection strategy for performance optimization when appropriate.
+Leverage @Input and @Output to communicate between parent and child components.
+
+#### 4. Services and Dependency Injection:
+
+Use services to share data and functionality across components.
+Prefer services over shared state through component properties whenever possible.
+Register services using Angular's dependency injection system.
+
+#### 5. Angular Modules:
+
+Use NgModule to organize and configure your application.
+Declare components, directives, and pipes in the appropriate module.
+Avoid declaring the same component in multiple modules, use shared modules instead.
+
+#### 6. Routing:
+
+Use Angular Router to handle navigation within your application.
+Separate routing configuration from the app module and feature modules.
+Use lazy loading for feature modules to improve initial loading times.
+
+#### 7. Error Handling:
+
+Implement error handling for asynchronous operations (e.g., HTTP requests) using try-catch blocks or the catchError operator in RxJS.
+Provide meaningful error messages and handle errors gracefully to prevent application crashes.
+
+#### 8. RxJS Usage:
+
+Avoid subscribing to multiple observables in the same component when possible.
+Unsubscribe from subscriptions in OnDestroy lifecycle hook to prevent memory leaks.
+Use operators like map, filter, and switchMap to manipulate data and simplify code.
+
+#### 9. Template Best Practices:
+
+Keep templates simple and avoid excessive logic or complex expressions.
+Prefer using built-in Angular directives (e.g., *ngFor, *ngIf, *ngSwitch) over custom structural directives.
+Use trackBy with *ngFor to improve rendering performance for lists.
+
+### 10. Testing:
+
+- Write unit tests for components, services, and directives to ensure code quality and prevent regressions.
+- Use test doubles like spies and mocks to isolate components and services during testing.
+
+#### 11. Accessibility (a11y):
+
+- Follow accessibility best practices to make your application usable for users with disabilities.
+- Use semantic HTML elements, ARIA attributes, and proper labels to improve accessibility.
+
+#### 12. Performance Optimization:
+
+- Lazy load modules to reduce the initial bundle size and improve application loading time.
+- Use AOT (Ahead-of-Time) compilation for production builds to improve runtime performance.
+- Minimize DOM manipulation and use OnPush change detection strategy to reduce unnecessary updates.
+
+Adhering to these best practices and style guidelines will lead to more maintainable, scalable, and performant Angular applications. Consistency and readability are key to collaborative development and reducing potential bugs in your codebase.
+
+<br />
 
 # PROJECT DEPENDENCIES
 
@@ -655,70 +1079,56 @@ fortawesome
 
 ngx-cookie-service
 
+<br />
+
 # Feature needed functions
 
-<!-- HTTP Client and API Communication -->
+1. Change Detection and Zones
 
-<!-- Observables and RxJS -->
+2. Angular Universal (Server-side Rendering)
 
-Angular Material and UI Components
+3. Angular Ivy (The new rendering engine, introduced in Angular 9)
 
-Angular Animations
+4. Angular Elements (Package Angular components as custom elements)
 
-Angular Compiler and AOT (Ahead-of-Time) Compilation
+5. Angular Compiler Options (Control how Angular compiles and bundles the application)
 
-Change Detection and Zones
+6. Angular Language Service (IDE support for Angular in editors like Visual Studio Code)
 
-Angular Universal (Server-side Rendering)
+7. Progressive Web Apps (PWA) support
 
-RxJS (Reactive Extensions for JavaScript)
+8. Angular Schematics (Extensible code generation tools)
 
-Angular Ivy (The new rendering engine, introduced in Angular 9)
+9. Angular DevTools (Chrome extension for Angular application debugging)
 
-Angular Elements (Package Angular components as custom elements)
+10. Bazel (An alternative build tool for Angular)
 
-Angular Compiler Options (Control how Angular compiles and bundles the application)
+11. Angular Performance Optimization
 
-Angular Language Service (IDE support for Angular in editors like Visual Studio Code)
+12. Angular Upgrade and Migration Strategies (AngularJS to Angular)
 
-Progressive Web Apps (PWA) support
+13. Angular Design Patterns
 
-Angular Schematics (Extensible code generation tools)
+14. State Management (ngrx/store or Ngxs)
 
-Angular DevTools (Chrome extension for Angular application debugging)
+15. Angular Security (XSS, CSRF, etc.)
 
-Bazel (An alternative build tool for Angular)
+16. Angular Testing (Unit Testing, Integration Testing, and End-to-end Testing)
 
-Angular Performance Optimization
-
-Angular Upgrade and Migration Strategies (AngularJS to Angular)
-
-Angular Best Practices and Style Guidelines
-
-Angular Design Patterns
-
-State Management (ngrx/store or Ngxs)
-
-Angular Security (XSS, CSRF, etc.)
-
-Angular Deployment and Hosting
-
-Angular Testing (Unit Testing, Integration Testing, and End-to-end Testing)
-
-Angular Internationalization (i18n)
+17. Angular Internationalization (i18n)
 
 ---
 
-Reverse Proxy
+18. Reverse Proxy
 
-SSL/TLS
+19. SSL/TLS
 
-Authentication and Authorization
+20. Authentication and Authorization
 
-Cross-Site Request Forgery (CSRF) Protection
+21. Cross-Site Request Forgery (CSRF) Protection
 
-Content Security Policy (CSP)
+22. Content Security Policy (CSP)
 
-HTTP Security Headers
+23. HTTP Security Headers
 
-Cache Handling
+24. Cache Handling
