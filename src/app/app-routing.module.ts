@@ -64,6 +64,7 @@ import { ColorChangeComponent } from './animations/color-change/color-change.com
 import { KeyframeComponent } from './animations/keyframe/keyframe.component';
 import { BouncingComponent } from './animations/bouncing/bouncing.component';
 import { FlippingComponent } from './animations/flipping/flipping.component';
+import { ScrollComponent } from './animations/scroll/scroll.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -126,7 +127,8 @@ const routes: Routes = [
   { path: 'color-change', component: ColorChangeComponent},
   { path: 'keyframe', component: KeyframeComponent},
   { path: 'bouncing', component: BouncingComponent},
-  { path: 'flipping', component: FlippingComponent}
+  { path: 'flipping', component: FlippingComponent},
+  { path: 'scroll', component: ScrollComponent}
 ];
 
 @NgModule({

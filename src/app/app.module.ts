@@ -88,6 +88,8 @@ import { ColorChangeComponent } from './animations/color-change/color-change.com
 import { KeyframeComponent } from './animations/keyframe/keyframe.component';
 import { BouncingComponent } from './animations/bouncing/bouncing.component';
 import { FlippingComponent } from './animations/flipping/flipping.component';
+import { ScrollComponent } from './animations/scroll/scroll.component';
+import { SequenceComponent } from './animations/sequence/sequence.component';
 
 @NgModule({
   declarations: [
@@ -172,6 +174,8 @@ import { FlippingComponent } from './animations/flipping/flipping.component';
     KeyframeComponent,
     BouncingComponent,
     FlippingComponent,
+    ScrollComponent,
+    SequenceComponent,
   ],
   imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, FormsModule, ReactiveFormsModule, NgbModule, FontAwesomeModule, HttpClientModule],
   providers: [],
