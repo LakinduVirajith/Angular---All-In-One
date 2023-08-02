@@ -83,6 +83,7 @@ import { AnimationsNavComponent } from './pages/animations-nav/animations-nav.co
 import { FadeInAndOutComponent } from './animations/fade-in-and-out/fade-in-and-out.component';
 import { SlideInAndOutComponent } from './animations/slide-in-and-out/slide-in-and-out.component';
 import { ScaleComponent } from './animations/scale/scale.component';
+import { RotateComponent } from './animations/rotate/rotate.component';
 
 @NgModule({
   declarations: [
@@ -162,6 +163,7 @@ import { ScaleComponent } from './animations/scale/scale.component';
     FadeInAndOutComponent,
     SlideInAndOutComponent,
     ScaleComponent,
+    RotateComponent,
   ],
   imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, FormsModule, ReactiveFormsModule, NgbModule, FontAwesomeModule, HttpClientModule],
   providers: [],

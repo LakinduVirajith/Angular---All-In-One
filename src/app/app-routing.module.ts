@@ -59,6 +59,7 @@ import { AnimationsNavComponent } from './pages/animations-nav/animations-nav.co
 import { FadeInAndOutComponent } from './animations/fade-in-and-out/fade-in-and-out.component';
 import { SlideInAndOutComponent } from './animations/slide-in-and-out/slide-in-and-out.component';
 import { ScaleComponent } from './animations/scale/scale.component';
+import { RotateComponent } from './animations/rotate/rotate.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -117,6 +118,7 @@ const routes: Routes = [
   { path: 'fade-in-and-out', component: FadeInAndOutComponent},
   { path: 'slide-in-and-out', component: SlideInAndOutComponent},
   { path: 'scale', component: ScaleComponent},
+  { path: 'rotate', component: RotateComponent},
 ];
 
 @NgModule({
